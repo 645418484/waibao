@@ -29,6 +29,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'username', title: __('Username'), operate: 'LIKE'},
                         {field: 'nickname', title: __('Nickname'), operate: 'LIKE'},
                         {field: 'email', title: __('Email'), operate: 'LIKE'},
+                        {field: 'over_desk_name', title: __('OverDesk'), operate: false},
+                        {field: 'list_desk_names', title: __('ListDesk'), operate: false},
                         {field: 'mobile', title: __('Mobile'), operate: 'LIKE'},
                         {field: 'avatar', title: __('Avatar'), events: Table.api.events.image, formatter: Table.api.formatter.image, operate: false},
                         {field: 'level', title: __('Level'), operate: 'BETWEEN', sortable: true},

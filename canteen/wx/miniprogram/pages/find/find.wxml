@@ -1,0 +1,44 @@
+<!--miniprogram/pages/find/find.wxml-->
+<view class="container">
+  <!-- 具体subject -->
+  <view class="subjects">
+    <block wx:for="{{findSubjectsData}}" wx:key="index"  >
+      <view class="subjectItem">
+        <view class="subjectImg">
+          <image src="{{img}}"  bindtap="toggleDialog" data-id="{{item.id}}" data-now_people="{{item.now_people}}"/>
+        </view>    
+        <view class="subjectName">
+          <text >{{item.name}}</text>
+          <text class="choujiang" >人数</text>
+          <text >{{item.people}}</text>
+          <text class="itemNum" >在座人数:{{item.now_people}}</text>
+          <text class="success" wx:if="{{item.now_people == 0}}" >可入座</text>
+          <!-- <text wx:else="{{item.now_people == 0}}" >入座</text> -->
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<tabbar on="find"></tabbar>
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <!-- 如果想点击弹窗外不隐藏，取消bindtap点击事件即可 -->
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <view class="container">
+      <view class="page-body">
+        <form catchsubmit="formSubmit" catchreset="formReset" data-id="{{desk_id}}">
+
+          <view class="page-section page-section-gap">
+            <view class="page-section-title">人数</view>
+            <slider value="5" max="10" min="1" name="now_people" show-value ></slider>
+          </view>
+
+          <view class="btn-area">
+            <button type="primary" formType="submit">确定</button>
+          </view>
+        </form>
+      </view>
+
+    </view>
+  </view>
+</view>

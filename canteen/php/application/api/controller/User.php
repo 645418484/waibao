@@ -76,11 +76,11 @@ class User extends Api
             // 如果已存在账户
             $ret = $this->auth->direct($userInfo->id);
         }else{
+            $userInfo = $this->request->param('nickname');
             // 注册账户
-            $ret = $this->auth->register("wx".uniqid(), Random::alnum(), '', '', [
+            $ret = $this->auth->register($userInfo, Random::alnum(), '', '', [
                 'openid'=> $openid,
-                'username'=>$this->request->param('userInfo.nickName'),
-                'nickName'=>$this->request->param('userInfo.nickName'),
+                'nickName'=>$userInfo,
             ]);
         }
         

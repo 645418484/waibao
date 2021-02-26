@@ -15,6 +15,8 @@ return [
     'Male'           => '男',
     'FeMale'         => '女',
     'Birthday'       => '生日',
+    'OverDesk'       => '最后使用餐桌号',
+    'ListDesk'       => '历史使用餐桌号',
     'Bio'            => '格言',
     'Score'          => '积分',
     'Successions'    => '连续登录天数',

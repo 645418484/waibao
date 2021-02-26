@@ -4,11 +4,11 @@
   "setting": {
     "urlCheck": true,
     "es6": true,
-    "enhance": true,
+    "enhance": false,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
-    "newFeature": true,
+    "newFeature": false,
     "coverView": true,
     "nodeModules": false,
     "autoAudits": false,
@@ -19,7 +19,7 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-    "useMultiFrameRuntime": true,
+    "useMultiFrameRuntime": false,
     "useApiHook": true,
     "babelSetting": {
       "ignore": [],
@@ -34,12 +34,11 @@
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "useApiHostProcess": false
+    "minifyWXSS": true
   },
-  "appid": "wx92da12f02ac09ab3",
-  "projectname": "miniprogram-1",
-  "libVersion": "2.14.1",
+  "appid": "wx413099322aac790b",
+  "projectname": "Lite",
+  "libVersion": "2.2.5",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {

@@ -1,0 +1,18 @@
+<!--components/goodList/goodList.wxml-->
+<view class="goodList-good">
+  <view class="goodList-good-img">
+    <image src="{{url}}" mode="aspectFill" />
+  </view>
+  <view class="goodList-good_detail">
+    <view class="good_detail_name">
+      {{name}}
+    </view>
+    <view class="good_detail_brief">
+      {{brief}}
+    </view>
+    <view class="good_detail_price">
+      <text class="price" >￥{{price}}</text>
+      <text class="oldPrice" style="display:{{oldPrice == '' ? 'none': 'inline'}};">￥{{oldPrice}}</text>
+    </view>
+  </view>
+</view>

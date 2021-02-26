@@ -1,0 +1,23 @@
+<!--components/tabbar/tabbar.wxml-->
+<view class="tabbar">
+  <view class="shouye {{on === 'index' ? 'on': ''}}" data-page="index" bindtap="goToPage">
+    <icon type="shouye" size="42" class="icon" color="{{on === 'index' ? '#f96702': ''}}"/>
+    <text >首页</text>
+  </view>
+  <view class="fenlei {{on === 'category' ? 'on': ''}}" data-page="category" bindtap="goToPage">
+    <icon type="classify" size="42" class="icon" color="{{on === 'category' ? '#f96702': ''}}"/>
+    <text >点餐</text>
+  </view>
+  <view class="faxian {{on === 'find' ? 'on': ''}}" data-page="find" bindtap="goToPage">
+    <icon type="faxian" size="42" class="icon" color="{{on === 'find' ? '#f96702': ''}}"/>
+    <text >餐桌</text>
+  </view>
+  <view class="dingdan {{on === 'cart' ? 'on': ''}}" data-page="cart" bindtap="goToPage">
+    <icon size="42" class="icon iconfont icon-wuliaofenlei" color="{{on === 'cart' ? '#f96702': ''}}"/>
+    <text >订单</text>
+  </view>
+  <view class="wode {{on === 'user' ? 'on': ''}}" data-page="user" bindtap="goToPage">
+    <icon type="wode" size="42" class="icon" color="{{on === 'user' ? '#f96702': ''}}"/>
+    <text >我的</text>
+  </view>
+</view>

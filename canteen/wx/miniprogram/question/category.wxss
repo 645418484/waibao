@@ -1,0 +1,99 @@
+
+
+/* 错误 */
+/* miniprogram/pages/category/category.wxss */
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+width: 0px;
+height: 0px;
+background-color: pink;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+/* ::-webkit-scrollbar-track
+{
+-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+border-radius: 10px;
+background-color: yellow;
+} */
+/*定义滑块 内阴影+圆角*/
+/* ::-webkit-scrollbar-thumb
+{
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,.3);
+background-color: #ff5500;
+} */
+
+.container{
+  height: 100%;
+  background-color: #e0e0e0;
+}
+.categroy-left {
+  height: 100%;
+  width: 150rpx;
+  float: left;
+  border-right: 1px solid #ebebeb;
+  box-sizing: border-box;
+  position: fixed;
+}
+.categroy-left .cate-list {
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border: 2px solid #fff;
+}
+.categroy-left .cate-list.on {
+  color: #ff4800;
+}
+/* 右边的列表 */
+.categroy-right {
+  width: 600rpx;
+  float: right; 
+  height: 1200rpx;
+  /* height: 100%; */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.right-title {
+  width: 100%;
+  text-align: center;
+  position: relative;  
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+ .right-list text::before, .right-list text::after {
+  content: '';
+  position: absolute;
+  width: 60rpx;
+  /* height: 1px; */
+  top: 50%;
+  border-top: 1px solid #e0e0e0;
+  /* transform: scale(.5); */
+}
+.right-list text::before { 
+  left: 30%;
+}
+.right-list text::after {
+  right: 30%;
+}
+.right-list {
+  /* height: 100%; */
+  background-color: #fff;
+}
+.right-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.right-list .list-detail {
+  flex-shrink: 0;
+  width: 33.3%;
+  height: 100%;
+  font-size: 26rpx;
+  text-align: center;
+}
+.right-list .list-detail image {
+  width: 120rpx;
+  height: 120rpx;
+}

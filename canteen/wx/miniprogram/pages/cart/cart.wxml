@@ -1,0 +1,89 @@
+<!-- miniprogram/pages/cart/cart.wxml -->
+<!-- <text>miniprogram/pages/cart/cart.wxml</text> -->
+<view class="container">
+  <block wx:if="{{!hasCart}}">
+    <view class="cartNull">
+      <view class="img">
+        <image src="../../assets/images/cart.png" />
+      </view>
+      <view class="text">
+        <text>订单还是空的</text>
+      </view>
+      <view class="navIndex">
+        <text>去点餐</text>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <block wx:if="{{status == 1}}">
+      <view class="cart_lists">
+        <block wx:for="{{cartgoods}}" wx:key="{{index}}">
+          <view class="cart_list" >
+            <view class="cart_list__img__name__color">
+              <view class="cart_list__img">
+                <image src="{{item.img}}" mode="widthFix" />
+              </view>
+              <view class="cart_list__name__color">{{item.name}} {{item.color}}</view>
+            </view>
+            <view class="cart_list__price">
+              {{item.num}}×
+              <text>{{item.price}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class="cart_footer">
+        <view class="selectALL__total" bindtap="selectAll">
+          <view class="total">
+            <text >合计:</text>{{totalPrice}}
+          </view>
+        </view>
+        <view class="settlement" bindtap="toggleDialog">
+          <text >结算</text>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="listOrder" wx:for="{{listOrder}}"> 
+        <view class="orderBox">
+          <view class="orderInfo">
+            <text style="margin-right:20rpx">餐桌:{{item.name}}</text>
+            <text>总金额:{{item.sum}}</text>
+          </view>
+          <view class="orderMenu">
+            <view class="orderMenuBox" wx:for="{{item.menu_list}}">
+              <text class="name">{{item.name}}</text>
+              <view class="info">单价:{{item.price}}x{{item.num}}(份)</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+<tabbar on="cart"></tabbar>
+<view class="zan-dialog {{ showDialog ? 'zan-dialog--show' : '' }}">
+  <!-- 如果想点击弹窗外不隐藏，取消bindtap点击事件即可 -->
+  <view class="zan-dialog__mask" bindtap="toggleDialog" />
+  <view class="zan-dialog__container">
+    <view class="container">
+      <view class="page-body">
+        <form catchsubmit="formSubmit" catchreset="formReset" data-id="{{desk_id}}">
+          <view class="page-section page-section-gap">
+            <view class="page-section-title">桌号:{{deskname}}</view>
+          </view>
+          <view class="page-section page-section-gap">
+            <view class="page-section-title">用户:{{nickname}}</view>
+          </view>
+          <view class="page-section page-section-gap">
+            <view class="page-section-title">金额:{{totalPrice}}</view>
+          </view>
+          <view class="btn-area">
+            <button type="primary" formType="submit">支付</button>
+          </view>
+        </form>
+      </view>
+
+    </view>
+  </view>
+</view>

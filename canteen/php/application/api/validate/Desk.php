@@ -1,6 +1,6 @@
 <?php
 
-namespace app\admin\validate;
+namespace app\api\validate;
 
 use think\Validate;
 
@@ -10,17 +10,18 @@ class Desk extends Validate
      * 验证规则
      */
     protected $rule = [
-        'desk' => 'require|integer',
-        ''
+        'desk_id' => 'require|integer',
+        'now_people' => 'require|integer',
     ];
 
     /**
      * 字段描述
      */
     protected $field = [
-        'desk.require' => '请选择桌号',
-        'desk.integer' => '桌号格式错误',
-        'desk.require' => '请选择桌号',
+        'desk_id.require' => '请选择桌号',
+        'desk_id.integer' => '桌号格式错误',
+        'now_people.require' => '请选择人数',
+        'now_people.integer' => '人数错误',
     ];
     /**
      * 提示消息
@@ -31,7 +32,7 @@ class Desk extends Validate
      * 验证场景
      */
     protected $scene = [
-        'usedesk' => []
+        'usedesk' => ['desk_id','now_people']
     ];
 
 }

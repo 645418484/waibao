@@ -1,0 +1,66 @@
+<!--miniprogram/pages/goodDetails/goodDetails.wxml-->
+<view class="main">
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" indicator-active-color="#ffffff" autoplay="{{autoPlay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{swiper_img}}" wx:key="index">
+      <swiper-item >
+        <image src="{{host}}{{item}}" mode="aspectFill" class="swiper_img"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 详情 -->
+  <view class="good-detail">
+    <view class="name">{{name}}</view>
+    <view class="brief" >
+      <block wx:for="{{brief}}" wx:key="index">
+        <text>{{item}}</text>
+      </block>
+    </view>
+    <view class="price">
+      <text >{{defaultData.price}}</text>
+      <text wx:if="{{defaultData.oldprice > 1}}">{{defaultData.oldprice}}</text>
+    </view>
+  </view>
+  <!-- 具体配置详情 -->
+  <view class="details_param">
+    <block wx:for="{{details_param}}" wx:key="index">
+      <view class="item">
+        <image class="item-img"src="{{item.imgSrc}}" />
+        <view class="item-param">{{item.param}}</view>
+        <view class="item-detail">{{item.details}}</view>
+      </view>
+    </block>
+  </view>
+  <!-- 购物地址 -->
+  <view class="info-choose-version">
+    <view class="address">
+      <text class="describe" >送至</text>
+      <text class="detail">南昌市 青山湖区</text>
+      <view class="right"></view>
+    </view>
+    <view class="sales">
+      <text class="describe">已选</text>
+      <text class="detail">南昌市 青山湖区</text>
+      <view class="right"></view>
+    </view>
+  </view> 
+  <!-- 概述或参数 -->
+  <view class="summarize-parameter">
+    <view class="title">
+      <view class="summarize" bindtap="changeState">
+        <text class="{{state === 'details_img'? 'on' : ''}}">概述</text>
+      </view>
+      <view class="parameter" bindtap="changeState">
+        <text class="{{state === 'param_img'? 'on' : ''}}">参数</text>
+      </view>
+    </view>
+    <view class="state">
+      <block wx:for="{{state === 'details_img'? details_img : param_img}}" wx:key="index">
+          <image src="{{host}}{{item}}" mode="widthFix"/>
+      </block>
+    </view>
+  </view>
+</view>
+<!-- 底部固定导航 -->
+<view class="shopping">
+  <view class="buyNow">立即购买</view>
+</view>

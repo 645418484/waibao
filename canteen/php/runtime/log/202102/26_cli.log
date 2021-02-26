@@ -1,0 +1,46 @@
+[ 2021-02-26T13:54:44+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000176s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T13:54:44+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T13:54:44+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007110s ]
+[ 2021-02-26T13:56:52+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000144s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T13:56:52+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T13:56:52+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006424s ]
+[ 2021-02-26T14:10:54+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000188s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T14:10:54+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T14:10:54+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007010s ]
+[ 2021-02-26T17:23:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000173s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T17:23:25+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T17:23:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.006805s ]
+[ 2021-02-26T17:23:25+08:00 ][ info ] [ DB ] INIT mysql
+[ 2021-02-26T17:23:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000204s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T17:23:25+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T17:23:25+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007474s ]
+[ 2021-02-26T17:23:25+08:00 ][ info ] [ DB ] INIT mysql
+[ 2021-02-26T17:23:25+08:00 ][ info ] [ LANG ] D:\phpEnv\www\wurendiancan\application\admin\lang/zh-cn.php
+[ 2021-02-26T17:24:57+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000140s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T17:24:57+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T17:24:57+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007057s ]
+[ 2021-02-26T17:24:57+08:00 ][ info ] [ DB ] INIT mysql
+[ 2021-02-26T17:24:57+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000159s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T17:24:57+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T17:24:57+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007088s ]
+[ 2021-02-26T17:24:57+08:00 ][ info ] [ DB ] INIT mysql
+[ 2021-02-26T17:24:57+08:00 ][ info ] [ LANG ] D:\phpEnv\www\wurendiancan\application\admin\lang/zh-cn.php
+[ 2021-02-26T18:14:20+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000148s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T18:14:20+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T18:14:20+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007099s ]
+[ 2021-02-26T18:18:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000155s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T18:18:03+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T18:18:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007742s ]
+[ 2021-02-26T18:18:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000158s ]
+[ info ] [ LOG ] INIT File
+[ 2021-02-26T18:18:45+08:00 ][ info ] [ CACHE ] INIT File
+[ 2021-02-26T18:18:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007792s ]

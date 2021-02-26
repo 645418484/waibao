@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 25/02/2021 18:28:47
+ Date: 26/02/2021 18:20:36
 */
 
 SET NAMES utf8mb4;
@@ -43,7 +43,7 @@ CREATE TABLE `fa_admin`  (
 -- ----------------------------
 -- Records of fa_admin
 -- ----------------------------
-INSERT INTO `fa_admin` VALUES (1, 'admin', 'Admin', '64329c7bfca33c728502e5fb94aa468d', '3cf752', '/assets/img/avatar.png', 'admin@admin.com', 0, 1614245081, '127.0.0.1', 1492186163, 1614245081, '23536f48-d293-4454-9872-1e3a844adb82', 'normal');
+INSERT INTO `fa_admin` VALUES (1, 'admin', 'Admin', '64329c7bfca33c728502e5fb94aa468d', '3cf752', '/assets/img/avatar.png', 'admin@admin.com', 0, 1614331357, '127.0.0.1', 1492186163, 1614331357, '5d1e8625-e217-49ce-a1b4-214a3dfe4e10', 'normal');
 
 -- ----------------------------
 -- Table structure for fa_admin_log
@@ -61,7 +61,7 @@ CREATE TABLE `fa_admin_log`  (
   `createtime` int(10) NULL DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `name`(`username`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '管理员日志表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '管理员日志表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fa_admin_log
@@ -70,6 +70,9 @@ INSERT INTO `fa_admin_log` VALUES (1, 1, 'admin', '/wBqMyUCfFn.php/index/login?u
 INSERT INTO `fa_admin_log` VALUES (2, 1, 'admin', '/wBqMyUCfFn.php/addon/install', '插件管理', '{\"name\":\"third\",\"force\":\"0\",\"uid\":\"33500\",\"token\":\"***\",\"version\":\"1.2.2\",\"faversion\":\"1.2.0.20201008_beta\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', 1614224331);
 INSERT INTO `fa_admin_log` VALUES (3, 1, 'admin', '/wBqMyUCfFn.php/auth/rule/multi', '权限管理 / 菜单规则', '{\"action\":\"\",\"ids\":\"85\",\"params\":\"ismenu=0\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', 1614224387);
 INSERT INTO `fa_admin_log` VALUES (4, 1, 'admin', '/wBqMyUCfFn.php/index/login?url=%2FwBqMyUCfFn.php%2Fauth%2Frule%3Fref%3Daddtabs', '登录', '{\"url\":\"\\/wBqMyUCfFn.php\\/auth\\/rule?ref=addtabs\",\"__token__\":\"***\",\"username\":\"admin\",\"password\":\"***\",\"captcha\":\"6bd5\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', 1614245081);
+INSERT INTO `fa_admin_log` VALUES (5, 1, 'admin', '/wBqMyUCfFn.php/index/login?url=%2FwBqMyUCfFn.php', '登录', '{\"url\":\"\\/wBqMyUCfFn.php\",\"__token__\":\"***\",\"username\":\"admin\",\"password\":\"***\",\"captcha\":\"ptxr\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36', 1614331357);
+INSERT INTO `fa_admin_log` VALUES (6, 1, 'admin', '/wBqMyUCfFn.php/auth/rule/edit/ids/88?dialog=1', '权限管理 / 菜单规则 / 编辑', '{\"dialog\":\"1\",\"__token__\":\"***\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"order_form\",\"title\":\"订单管理\",\"icon\":\"fa fa-circle-o\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"88\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36', 1614331489);
+INSERT INTO `fa_admin_log` VALUES (7, 1, 'admin', '/wBqMyUCfFn.php/auth/rule/edit/ids/67?dialog=1', '权限管理 / 菜单规则 / 编辑', '{\"dialog\":\"1\",\"__token__\":\"***\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"user\\/user\",\"title\":\"会员管理\",\"icon\":\"fa fa-user\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"67\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36', 1614333678);
 
 -- ----------------------------
 -- Table structure for fa_area
@@ -185,7 +188,7 @@ CREATE TABLE `fa_auth_rule`  (
   UNIQUE INDEX `name`(`name`) USING BTREE,
   INDEX `pid`(`pid`) USING BTREE,
   INDEX `weigh`(`weigh`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 88 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '节点表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 102 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '节点表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fa_auth_rule
@@ -254,7 +257,7 @@ INSERT INTO `fa_auth_rule` VALUES (63, 'file', 4, 'addon/config', 'Setting', 'fa
 INSERT INTO `fa_auth_rule` VALUES (64, 'file', 4, 'addon/refresh', 'Refresh', 'fa fa-circle-o', '', '', 0, 1502035509, 1502035509, 0, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (65, 'file', 4, 'addon/multi', 'Multi', 'fa fa-circle-o', '', '', 0, 1502035509, 1502035509, 0, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (66, 'file', 0, 'user', 'User', 'fa fa-list', '', '', 1, 1516374729, 1516374729, 0, 'normal');
-INSERT INTO `fa_auth_rule` VALUES (67, 'file', 66, 'user/user', 'User', 'fa fa-user', '', '', 1, 1516374729, 1516374729, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (67, 'file', 0, 'user/user', '会员管理', 'fa fa-user', '', '', 1, 1516374729, 1614333678, 0, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (68, 'file', 67, 'user/user/index', 'View', 'fa fa-circle-o', '', '', 0, 1516374729, 1516374729, 0, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (69, 'file', 67, 'user/user/edit', 'Edit', 'fa fa-circle-o', '', '', 0, 1516374729, 1516374729, 0, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (70, 'file', 67, 'user/user/add', 'Add', 'fa fa-circle-o', '', '', 0, 1516374729, 1516374729, 0, 'normal');
@@ -275,6 +278,20 @@ INSERT INTO `fa_auth_rule` VALUES (84, 'file', 79, 'user/rule/multi', 'Multi', '
 INSERT INTO `fa_auth_rule` VALUES (85, 'file', 0, 'third', '第三方登录管理', 'fa fa-users', '', '', 0, 1614224331, 1614224387, 0, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (86, 'file', 85, 'third/index', '查看', 'fa fa-circle-o', '', '', 0, 1614224331, 1614224331, 0, 'normal');
 INSERT INTO `fa_auth_rule` VALUES (87, 'file', 85, 'third/del', '删除', 'fa fa-circle-o', '', '', 0, 1614224331, 1614224331, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (88, 'file', 0, 'order_form', '订单管理', 'fa fa-circle-o', '', '', 1, 1614331405, 1614331489, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (89, 'file', 88, 'order_form/import', 'Import', 'fa fa-circle-o', '', '', 0, 1614331405, 1614331405, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (90, 'file', 88, 'order_form/index', '查看', 'fa fa-circle-o', '', '', 0, 1614331405, 1614331405, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (91, 'file', 88, 'order_form/add', '添加', 'fa fa-circle-o', '', '', 0, 1614331405, 1614331405, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (92, 'file', 88, 'order_form/edit', '编辑', 'fa fa-circle-o', '', '', 0, 1614331405, 1614331405, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (93, 'file', 88, 'order_form/del', '删除', 'fa fa-circle-o', '', '', 0, 1614331405, 1614331405, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (94, 'file', 88, 'order_form/multi', '批量更新', 'fa fa-circle-o', '', '', 0, 1614331405, 1614331405, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (95, 'file', 0, 'desk', '桌子管理', 'fa fa-circle-o', '', '', 1, 1614331497, 1614331497, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (96, 'file', 95, 'desk/import', 'Import', 'fa fa-circle-o', '', '', 0, 1614331497, 1614331497, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (97, 'file', 95, 'desk/index', '查看', 'fa fa-circle-o', '', '', 0, 1614331497, 1614331497, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (98, 'file', 95, 'desk/add', '添加', 'fa fa-circle-o', '', '', 0, 1614331497, 1614331497, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (99, 'file', 95, 'desk/edit', '编辑', 'fa fa-circle-o', '', '', 0, 1614331497, 1614331497, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (100, 'file', 95, 'desk/del', '删除', 'fa fa-circle-o', '', '', 0, 1614331497, 1614331497, 0, 'normal');
+INSERT INTO `fa_auth_rule` VALUES (101, 'file', 95, 'desk/multi', '批量更新', 'fa fa-circle-o', '', '', 0, 1614331497, 1614331497, 0, 'normal');
 
 -- ----------------------------
 -- Table structure for fa_category
@@ -369,20 +386,14 @@ CREATE TABLE `fa_desk`  (
   `lock` smallint(1) NULL DEFAULT NULL COMMENT '是否被使用',
   `now_people` int(5) NULL DEFAULT NULL COMMENT '现在人数',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '桌子表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '桌子表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for fa_desk_log
+-- Records of fa_desk
 -- ----------------------------
-DROP TABLE IF EXISTS `fa_desk_log`;
-CREATE TABLE `fa_desk_log`  (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '桌子名',
-  `people` int(5) NULL DEFAULT NULL COMMENT '可用人数',
-  `lock` smallint(1) NULL DEFAULT NULL COMMENT '是否被使用',
-  `now_people` int(5) NULL DEFAULT NULL COMMENT '现在人数',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '桌子表' ROW_FORMAT = Dynamic;
+INSERT INTO `fa_desk` VALUES (1, '一号', 10, 0, 5);
+INSERT INTO `fa_desk` VALUES (2, '二号', 10, 0, 0);
+INSERT INTO `fa_desk` VALUES (3, '三号', 10, 0, 0);
 
 -- ----------------------------
 -- Table structure for fa_ems
@@ -409,332 +420,337 @@ CREATE TABLE `fa_menu`  (
   `img` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT '缩略图',
   `author` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '作者',
   `class` smallint(10) NULL DEFAULT NULL COMMENT '菜品类型',
+  `price` int(10) NULL DEFAULT NULL COMMENT '价格',
+  `oldprice` int(10) NULL DEFAULT NULL COMMENT '原价',
+  `brief` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT 'tips',
+  `is_banner` smallint(1) NULL DEFAULT NULL COMMENT '是否为轮播菜品',
+  `is_goodlist` smallint(1) NULL DEFAULT NULL COMMENT '是否为人气菜品',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 321 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fa_menu
 -- ----------------------------
-INSERT INTO `fa_menu` VALUES (1, '香辣莲藕', '/uploads/Menu/78468144_1.jpg', '雷小厨', 17);
-INSERT INTO `fa_menu` VALUES (2, '海鲜秀珍菇豆腐', '/uploads/Menu/78468144_2.jpg', '花鱼儿', 13);
-INSERT INTO `fa_menu` VALUES (3, '紫苏土豆焖鸭', '/uploads/Menu/78468144_3.jpg', 'Suki燕儿', 3);
-INSERT INTO `fa_menu` VALUES (4, '酥炸带鱼', '/uploads/Menu/78468144_4.jpg', '夏家私享菜', 15);
-INSERT INTO `fa_menu` VALUES (5, '辣炒扁芸豆', '/uploads/Menu/78468144_5.jpg', '政妈妈', 16);
-INSERT INTO `fa_menu` VALUES (6, '蛋蒸花蛤', '/uploads/Menu/78468144_6.jpg', 'YNZAXYS_XOCKeM', 12);
-INSERT INTO `fa_menu` VALUES (7, '可乐翅中', '/uploads/Menu/78468144_7.jpg', 'YNZAXYS_XOCKeM', 13);
-INSERT INTO `fa_menu` VALUES (8, '清蒸龙利鱼柳', '/uploads/Menu/78468144_8.jpg', '宣大爷是胖妞', 6);
-INSERT INTO `fa_menu` VALUES (9, '干锅酱香蟹', '/uploads/Menu/78468144_9.jpg', 'YNZAXYS_XOCKeM', 11);
-INSERT INTO `fa_menu` VALUES (10, '西红柿炒蛋', '/uploads/Menu/78468144_10.jpg', 'YouTude精彩视频', 8);
-INSERT INTO `fa_menu` VALUES (11, '酸甜排骨', '/uploads/Menu/78468144_11.jpg', 'Elin', 10);
-INSERT INTO `fa_menu` VALUES (12, '荷兰豆炒五花肉', '/uploads/Menu/78468144_12.jpg', '关于小妮', 6);
-INSERT INTO `fa_menu` VALUES (13, '酱香杏鲍菇肉片', '/uploads/Menu/78468144_13.jpg', '二婷爱美食', 15);
-INSERT INTO `fa_menu` VALUES (14, '蒜蓉粉丝蒸扇贝', '/uploads/Menu/78468144_14.jpg', '马小马_CGGLmT', 10);
-INSERT INTO `fa_menu` VALUES (15, '葱爆羊肉', '/uploads/Menu/78468144_15.jpg', '家夏', 6);
-INSERT INTO `fa_menu` VALUES (16, '私房浓香鸡煲', '/uploads/Menu/78468144_16.jpg', '允儿小妞的厨房', 12);
-INSERT INTO `fa_menu` VALUES (17, '泡椒笋干回锅肉', '/uploads/Menu/78468144_17.jpg', '掀帘晨曦datura', 16);
-INSERT INTO `fa_menu` VALUES (18, '秋葵炒虾仁', '/uploads/Menu/78468144_18.jpg', '清水淡竹', 8);
-INSERT INTO `fa_menu` VALUES (19, '蒜蓉虾仁生蚝蒸粉丝', '/uploads/Menu/78468144_19.jpg', '宣大爷是胖妞', 7);
-INSERT INTO `fa_menu` VALUES (20, '包菜炒粉丝', '/uploads/Menu/78468144_20.jpg', '掀帘晨曦datura', 15);
-INSERT INTO `fa_menu` VALUES (21, '叫花鸡', '/uploads/Menu/78468144_21.jpg', '这世道☆没人道', 16);
-INSERT INTO `fa_menu` VALUES (22, '泡椒蒸鱼', '/uploads/Menu/78468144_22.jpg', 'sourcehe', 9);
-INSERT INTO `fa_menu` VALUES (23, '盖浇嫩豆腐', '/uploads/Menu/78468144_23.jpg', '女为悦己者而容', 2);
-INSERT INTO `fa_menu` VALUES (24, '干煸手撕杏鲍菇', '/uploads/Menu/78468144_24.jpg', '李李小酒窝', 3);
-INSERT INTO `fa_menu` VALUES (25, '蜜汁叉烧', '/uploads/Menu/78468144_25.jpg', '胖子瘦子我都爱', 12);
-INSERT INTO `fa_menu` VALUES (26, '香辣土豆片', '/uploads/Menu/78468144_26.jpg', '二婷爱美食', 15);
-INSERT INTO `fa_menu` VALUES (27, '水煮牛肉', '/uploads/Menu/78468144_27.jpg', '罗拉藏馆', 17);
-INSERT INTO `fa_menu` VALUES (28, '牛肉炒农家菜', '/uploads/Menu/78468144_28.jpg', 'rosejyy2000', 4);
-INSERT INTO `fa_menu` VALUES (29, '蒜黄木耳炒鸡蛋', '/uploads/Menu/78468144_29.jpg', 'JOJOJOJOJOJO', 11);
-INSERT INTO `fa_menu` VALUES (30, '麻辣牛肚百叶', '/uploads/Menu/78468144_30.jpg', '沵沵', 10);
-INSERT INTO `fa_menu` VALUES (31, '锅巴肉片', '/uploads/Menu/78468144_31.jpg', '个性胜过姿色', 9);
-INSERT INTO `fa_menu` VALUES (32, '空气炸锅版花菜', '/uploads/Menu/78468144_32.jpg', '韩优生活馆', 7);
-INSERT INTO `fa_menu` VALUES (33, '番茄土豆炖牛腩', '/uploads/Menu/78468144_33.jpg', '我幸福相约', 6);
-INSERT INTO `fa_menu` VALUES (34, '尖椒炒鸡胗', '/uploads/Menu/78468144_34.jpg', 'sourcehe', 9);
-INSERT INTO `fa_menu` VALUES (35, '可乐鸡翅', '/uploads/Menu/78468144_35.jpg', '陶玻网', 1);
-INSERT INTO `fa_menu` VALUES (36, '干烧白虾', '/uploads/Menu/78468144_36.jpg', '壹家食志', 8);
-INSERT INTO `fa_menu` VALUES (37, '炒土豆片', '/uploads/Menu/78468144_37.jpg', '雷小厨', 14);
-INSERT INTO `fa_menu` VALUES (38, '香椿炒鸡蛋', '/uploads/Menu/78468144_38.jpg', '冬季心情', 13);
-INSERT INTO `fa_menu` VALUES (39, '啤酒鹌鹑蛋', '/uploads/Menu/78468144_39.jpg', '食·色', 3);
-INSERT INTO `fa_menu` VALUES (40, '麻辣小龙虾', '/uploads/Menu/78468144_40.jpg', 'qem2000', 1);
-INSERT INTO `fa_menu` VALUES (41, '培根炒松花菜', '/uploads/Menu/78468144_41.jpg', '关于小妮', 15);
-INSERT INTO `fa_menu` VALUES (42, '酱香豆干', '/uploads/Menu/78468144_42.jpg', '眉儿', 4);
-INSERT INTO `fa_menu` VALUES (43, '回锅肉', '/uploads/Menu/78468144_43.jpg', '沵沵', 17);
-INSERT INTO `fa_menu` VALUES (44, '酸辣藕丁', '/uploads/Menu/78468144_44.jpg', '银元宝', 8);
-INSERT INTO `fa_menu` VALUES (45, '奥尔良烤翅', '/uploads/Menu/78468144_45.jpg', '蒙的宝', 16);
-INSERT INTO `fa_menu` VALUES (46, '红果茄汁焖大虾', '/uploads/Menu/78468144_46.jpg', '艳梅_h', 17);
-INSERT INTO `fa_menu` VALUES (47, '豆花牛肉', '/uploads/Menu/78468144_47.jpg', '遗忘↘蕾拉●', 13);
-INSERT INTO `fa_menu` VALUES (48, '飘香鸡翅', '/uploads/Menu/78468144_48.jpg', '四叶小馆', 15);
-INSERT INTO `fa_menu` VALUES (49, '桂花红糖鸡翅', '/uploads/Menu/78468144_49.jpg', '大嘴螺', 15);
-INSERT INTO `fa_menu` VALUES (50, '鸡汁蟹味菇', '/uploads/Menu/78468144_50.jpg', '梦悦的小灶炉', 14);
-INSERT INTO `fa_menu` VALUES (51, '蒜泥蒸茄子', '/uploads/Menu/78468144_51.jpg', '清水淡竹', 9);
-INSERT INTO `fa_menu` VALUES (52, '莲子豌豆炒虾仁', '/uploads/Menu/78468144_52.jpg', '清水淡竹', 16);
-INSERT INTO `fa_menu` VALUES (53, '冬瓜烧大排', '/uploads/Menu/78468144_53.jpg', '花鱼儿', 15);
-INSERT INTO `fa_menu` VALUES (54, '原味蒜苔排骨', '/uploads/Menu/78468144_54.jpg', 'ferrarizhun', 8);
-INSERT INTO `fa_menu` VALUES (55, '小白菜咸肉炒莲藕', '/uploads/Menu/78468144_55.jpg', '花鱼儿', 9);
-INSERT INTO `fa_menu` VALUES (56, '蒜茸空心菜', '/uploads/Menu/78468144_56.jpg', 'Meggy跳舞的苹果', 2);
-INSERT INTO `fa_menu` VALUES (57, '芷香鸡爪', '/uploads/Menu/78468144_57.jpg', '关于小妮', 6);
-INSERT INTO `fa_menu` VALUES (58, '玉米炖排骨', '/uploads/Menu/78468144_58.jpg', '舞之灵', 11);
-INSERT INTO `fa_menu` VALUES (59, '酸辣豆腐', '/uploads/Menu/78468144_59.jpg', '阳光明媚99', 5);
-INSERT INTO `fa_menu` VALUES (60, '糖醋丸子', '/uploads/Menu/78468144_60.jpg', 'twinsliuliu', 13);
-INSERT INTO `fa_menu` VALUES (61, '清蒸黄花鱼', '/uploads/Menu/78468144_61.jpg', '女为悦己者而容', 15);
-INSERT INTO `fa_menu` VALUES (62, '茄汁鱼柳', '/uploads/Menu/78468144_62.jpg', '黑猫警长kitchen', 9);
-INSERT INTO `fa_menu` VALUES (63, '可乐鸡翅', '/uploads/Menu/78468144_63.jpg', '随便粑粑', 11);
-INSERT INTO `fa_menu` VALUES (64, '咸肉炒豇豆豆干', '/uploads/Menu/78468144_64.jpg', 'rosejyy2000', 8);
-INSERT INTO `fa_menu` VALUES (65, '空气炸锅版蒜蓉烤基围虾', '/uploads/Menu/78468144_65.jpg', '韩优生活馆', 13);
-INSERT INTO `fa_menu` VALUES (66, '粉蒸排骨', '/uploads/Menu/78468144_66.jpg', '恬萝姑娘', 14);
-INSERT INTO `fa_menu` VALUES (67, '鲜莲子炒虾仁', '/uploads/Menu/78468144_67.jpg', '营养美食设计李晖', 11);
-INSERT INTO `fa_menu` VALUES (68, '夏日田园小炒', '/uploads/Menu/78468144_68.jpg', '斯佳丽WH', 7);
-INSERT INTO `fa_menu` VALUES (69, '无水炒青菜', '/uploads/Menu/78468144_69.jpg', '威捷朗家居', 11);
-INSERT INTO `fa_menu` VALUES (70, '洋葱豆角炒香干', '/uploads/Menu/78468144_70.jpg', 'lxp幸福', 6);
-INSERT INTO `fa_menu` VALUES (71, '炖土豆', '/uploads/Menu/78468144_71.jpg', '雷小厨', 13);
-INSERT INTO `fa_menu` VALUES (72, '咖喱白菜鸡翅根', '/uploads/Menu/78468144_72.jpg', '花鱼儿', 13);
-INSERT INTO `fa_menu` VALUES (73, '家常焖三鲜', '/uploads/Menu/78468144_73.jpg', '贾府私房菜', 12);
-INSERT INTO `fa_menu` VALUES (74, '凤梨炒虾仁', '/uploads/Menu/78468144_74.jpg', '寒飘', 16);
-INSERT INTO `fa_menu` VALUES (75, '孜然麻辣小土豆', '/uploads/Menu/78468144_75.jpg', '猫猫家的私厨', 7);
-INSERT INTO `fa_menu` VALUES (76, '韭菜花炒蛏子', '/uploads/Menu/78468144_76.jpg', '花鱼儿', 16);
-INSERT INTO `fa_menu` VALUES (77, '干锅香辣鸭翅', '/uploads/Menu/78468144_77.jpg', '允儿小妞的厨房', 11);
-INSERT INTO `fa_menu` VALUES (78, '红烧肉烧笋', '/uploads/Menu/78468144_78.jpg', '舞之灵', 13);
-INSERT INTO `fa_menu` VALUES (79, '辣椒酱焖老豆腐', '/uploads/Menu/78468144_79.jpg', '黑猫警长kitchen', 15);
-INSERT INTO `fa_menu` VALUES (80, '豉香莲藕鲜虾', '/uploads/Menu/78468144_80.jpg', '花鱼儿', 4);
-INSERT INTO `fa_menu` VALUES (81, '豆豉鲮鱼油麦菜', '/uploads/Menu/78468144_81.jpg', 'hlr02', 2);
-INSERT INTO `fa_menu` VALUES (82, '咸肉卷心菜炒粉丝', '/uploads/Menu/78468144_82.jpg', '悦悦玉食', 3);
-INSERT INTO `fa_menu` VALUES (83, '葱烧鸡腿', '/uploads/Menu/78468144_83.jpg', '悦悦玉食', 6);
-INSERT INTO `fa_menu` VALUES (84, '韭菜炒鱿鱼', '/uploads/Menu/78468144_84.jpg', '冬季心情', 7);
-INSERT INTO `fa_menu` VALUES (85, '茄汁鸡蛋老豆腐', '/uploads/Menu/78468144_85.jpg', 'rosejyy2000', 11);
-INSERT INTO `fa_menu` VALUES (86, '百花酿茄子', '/uploads/Menu/78468144_86.jpg', '遗忘↘蕾拉●', 16);
-INSERT INTO `fa_menu` VALUES (87, '麻婆肉末白菜', '/uploads/Menu/78468144_87.jpg', '花鱼儿', 11);
-INSERT INTO `fa_menu` VALUES (88, '干煎小平鱼', '/uploads/Menu/78468144_88.jpg', '演堃@杨爸爸', 8);
-INSERT INTO `fa_menu` VALUES (89, '白萝卜炖排骨', '/uploads/Menu/78468144_89.jpg', 'Meggy跳舞的苹果', 4);
-INSERT INTO `fa_menu` VALUES (90, '豆腐圆子', '/uploads/Menu/78468144_90.jpg', '紫嫣秀儿', 11);
-INSERT INTO `fa_menu` VALUES (91, '清蒸帝王蟹', '/uploads/Menu/78468144_91.jpg', '翟女……', 13);
-INSERT INTO `fa_menu` VALUES (92, '泡椒猪肝', '/uploads/Menu/78468144_92.jpg', '人生就是过客', 4);
-INSERT INTO `fa_menu` VALUES (93, '酱香肉沫蒸茄子', '/uploads/Menu/78468144_93.jpg', '我家臭猪', 9);
-INSERT INTO `fa_menu` VALUES (94, '咖喱里脊肉豆腐', '/uploads/Menu/78468144_94.jpg', '花鱼儿', 1);
-INSERT INTO `fa_menu` VALUES (95, '酱鸡翅根', '/uploads/Menu/78468144_95.jpg', '我的美食我做主77', 5);
-INSERT INTO `fa_menu` VALUES (96, '家常麻婆豆腐', '/uploads/Menu/78468144_96.jpg', '眉儿', 1);
-INSERT INTO `fa_menu` VALUES (97, '青豆炒肉末', '/uploads/Menu/78468144_97.jpg', '二婷爱美食', 1);
-INSERT INTO `fa_menu` VALUES (98, '豆角焖面', '/uploads/Menu/78468144_98.jpg', '个性胜过姿色', 13);
-INSERT INTO `fa_menu` VALUES (99, '葱香蛏子', '/uploads/Menu/78468144_99.jpg', '美乐猪', 3);
-INSERT INTO `fa_menu` VALUES (100, '家常版梅干菜扣肉', '/uploads/Menu/78468144_100.jpg', '小诺厨娘', 12);
-INSERT INTO `fa_menu` VALUES (101, '鱼香肉丝', '/uploads/Menu/78468144_101.jpg', '心语梦境', 7);
-INSERT INTO `fa_menu` VALUES (102, '有机花菜炒花肉', '/uploads/Menu/78468144_102.jpg', '黑猫警长kitchen', 17);
-INSERT INTO `fa_menu` VALUES (103, '剁椒魚頭', '/uploads/Menu/78468144_103.jpg', '蔡礼城', 7);
-INSERT INTO `fa_menu` VALUES (104, '尖椒猪肉炒酸菜', '/uploads/Menu/78468144_104.jpg', '花鱼儿', 9);
-INSERT INTO `fa_menu` VALUES (105, '家烧粉丝小黄鱼', '/uploads/Menu/78468144_105.jpg', '夏家私享菜', 9);
-INSERT INTO `fa_menu` VALUES (106, '香椿炒鸡蛋', '/uploads/Menu/78468144_106.jpg', 'Meggy跳舞的苹果', 5);
-INSERT INTO `fa_menu` VALUES (107, '蒜蓉娃娃菜', '/uploads/Menu/78468144_107.jpg', '美乐猪', 14);
-INSERT INTO `fa_menu` VALUES (108, '粉蒸土豆丝', '/uploads/Menu/78468144_108.jpg', '个性胜过姿色', 14);
-INSERT INTO `fa_menu` VALUES (109, '圆白菜炒粉条', '/uploads/Menu/78468144_109.jpg', '宝妈小厨.', 7);
-INSERT INTO `fa_menu` VALUES (110, '蚝油烧豆腐', '/uploads/Menu/78468144_110.jpg', '宝妈小厨.', 9);
-INSERT INTO `fa_menu` VALUES (111, '家常炖鱼', '/uploads/Menu/78468144_111.jpg', '宝妈小厨.', 12);
-INSERT INTO `fa_menu` VALUES (112, '素炒茼蒿', '/uploads/Menu/78468144_112.jpg', '冬季心情', 11);
-INSERT INTO `fa_menu` VALUES (113, '香葱土豆', '/uploads/Menu/78468144_113.jpg', 'sourcehe', 14);
-INSERT INTO `fa_menu` VALUES (114, '蒜苗豆腐', '/uploads/Menu/78468144_114.jpg', '美乐猪', 7);
-INSERT INTO `fa_menu` VALUES (115, '鸡翅炖胡萝卜', '/uploads/Menu/78468144_115.jpg', '蒲的贪吃老爸', 15);
-INSERT INTO `fa_menu` VALUES (116, '苦瓜酿土豆泥', '/uploads/Menu/78468144_116.jpg', '大嘴螺', 5);
-INSERT INTO `fa_menu` VALUES (117, '灯笼茄子', '/uploads/Menu/78468144_117.jpg', '安娜_Anna', 10);
-INSERT INTO `fa_menu` VALUES (118, '酸辣土豆丝', '/uploads/Menu/78468144_118.jpg', 'Elin', 17);
-INSERT INTO `fa_menu` VALUES (119, '鱼香素鸡', '/uploads/Menu/78468144_119.jpg', '悦悦玉食', 17);
-INSERT INTO `fa_menu` VALUES (120, '家常美味千页豆腐', '/uploads/Menu/78468144_120.jpg', '掀帘晨曦datura', 13);
-INSERT INTO `fa_menu` VALUES (121, '卤水鱼', '/uploads/Menu/78468144_121.jpg', '人生就是过客', 10);
-INSERT INTO `fa_menu` VALUES (122, '糖衣莲子', '/uploads/Menu/78468144_122.jpg', '七九星星', 3);
-INSERT INTO `fa_menu` VALUES (123, '玉米焖牛肉', '/uploads/Menu/78468144_123.jpg', 'sunshinewinnie', 4);
-INSERT INTO `fa_menu` VALUES (124, '粉蒸胡萝卜丝', '/uploads/Menu/78468144_124.jpg', '个性胜过姿色', 10);
-INSERT INTO `fa_menu` VALUES (125, '茄汁黄豆炖牛肉', '/uploads/Menu/78468144_125.jpg', '政妈妈', 9);
-INSERT INTO `fa_menu` VALUES (126, '山蘑菇炖鸡', '/uploads/Menu/78468144_126.jpg', '政妈妈', 12);
-INSERT INTO `fa_menu` VALUES (127, '肉沫茄子', '/uploads/Menu/78468144_127.jpg', '雷小厨', 3);
-INSERT INTO `fa_menu` VALUES (128, '土豆啤酒鸭', '/uploads/Menu/78468144_128.jpg', '悦悦玉食', 11);
-INSERT INTO `fa_menu` VALUES (129, '鲜香板栗红烧肉', '/uploads/Menu/78468144_129.jpg', '陶玻网', 6);
-INSERT INTO `fa_menu` VALUES (130, '菠菜炒鸡蛋', '/uploads/Menu/78468144_130.jpg', '掀帘晨曦datura', 2);
-INSERT INTO `fa_menu` VALUES (131, '爆炒花蛤', '/uploads/Menu/78468144_131.jpg', '家夏', 15);
-INSERT INTO `fa_menu` VALUES (132, '金沙鸡翅', '/uploads/Menu/78468144_132.jpg', '安宝的虎妈', 9);
-INSERT INTO `fa_menu` VALUES (133, '猪颈肉炒西瓜皮', '/uploads/Menu/78468144_133.jpg', 'rosejyy2000', 5);
-INSERT INTO `fa_menu` VALUES (134, '蒜蓉椒香空心菜', '/uploads/Menu/78468144_134.jpg', '掀帘晨曦datura', 2);
-INSERT INTO `fa_menu` VALUES (135, '红烧排骨', '/uploads/Menu/78468144_135.jpg', '安宝的虎妈', 8);
-INSERT INTO `fa_menu` VALUES (136, '茄汁卷心菜炖鸡肉', '/uploads/Menu/78468144_136.jpg', '遗忘↘蕾拉●', 8);
-INSERT INTO `fa_menu` VALUES (137, '咖喱小龙虾', '/uploads/Menu/78468144_137.jpg', '天天的呀', 16);
-INSERT INTO `fa_menu` VALUES (138, '丝瓜炒鸡蛋', '/uploads/Menu/78468144_138.jpg', '美乐猪', 3);
-INSERT INTO `fa_menu` VALUES (139, '秋葵煎皖鱼', '/uploads/Menu/78468144_139.jpg', 'sourcehe', 17);
-INSERT INTO `fa_menu` VALUES (140, '川味啤酒鱼', '/uploads/Menu/78468144_140.jpg', '人生就是过客', 10);
-INSERT INTO `fa_menu` VALUES (141, '辣炒花蛤', '/uploads/Menu/78468144_141.jpg', '乐悠厨房', 1);
-INSERT INTO `fa_menu` VALUES (142, '生蚝鸡蛋饼', '/uploads/Menu/78468144_142.jpg', '寒飘', 9);
-INSERT INTO `fa_menu` VALUES (143, '炸酱油鸡翅根', '/uploads/Menu/78468144_143.jpg', '花鱼儿', 11);
-INSERT INTO `fa_menu` VALUES (144, '肉丝苦瓜', '/uploads/Menu/78468144_144.jpg', '清水鱼翅', 4);
-INSERT INTO `fa_menu` VALUES (145, '豆腐炒秋葵', '/uploads/Menu/78468144_145.jpg', '清水淡竹', 12);
-INSERT INTO `fa_menu` VALUES (146, '素炒豆角黑木耳', '/uploads/Menu/78468144_146.jpg', 'Meggy跳舞的苹果', 3);
-INSERT INTO `fa_menu` VALUES (147, '花生米茶树菇烤麸', '/uploads/Menu/78468144_147.jpg', '花鱼儿', 7);
-INSERT INTO `fa_menu` VALUES (148, '辣酱爆鱿鱼', '/uploads/Menu/78468144_148.jpg', '眉儿', 2);
-INSERT INTO `fa_menu` VALUES (149, '三鲜鳝丝', '/uploads/Menu/78468144_149.jpg', '舍得的美食诱惑', 13);
-INSERT INTO `fa_menu` VALUES (150, '酱焖白豆腐干', '/uploads/Menu/78468144_150.jpg', '允儿小妞的厨房', 11);
-INSERT INTO `fa_menu` VALUES (151, '炸锅版日式可乐饼', '/uploads/Menu/78468144_151.jpg', '韩优生活馆', 16);
-INSERT INTO `fa_menu` VALUES (152, '鲜香肉末炒粒粒', '/uploads/Menu/78468144_152.jpg', '掀帘晨曦datura', 1);
-INSERT INTO `fa_menu` VALUES (153, '尖椒白萝卜炒肉丝', '/uploads/Menu/78468144_153.jpg', '掀帘晨曦datura', 14);
-INSERT INTO `fa_menu` VALUES (154, '番茄酱煎鱼', '/uploads/Menu/78468144_154.jpg', 'sourcehe', 11);
-INSERT INTO `fa_menu` VALUES (155, '排骨烩菜', '/uploads/Menu/78468144_155.jpg', 'nuomama522', 13);
-INSERT INTO `fa_menu` VALUES (156, '丝瓜酿肉', '/uploads/Menu/78468144_156.jpg', '威捷朗家居', 14);
-INSERT INTO `fa_menu` VALUES (157, '荷叶蒸排骨', '/uploads/Menu/78468144_157.jpg', 'hlr02', 14);
-INSERT INTO `fa_menu` VALUES (158, '绿豆芽炒韭菜', '/uploads/Menu/78468144_158.jpg', '绿野薄荷', 17);
-INSERT INTO `fa_menu` VALUES (159, '蒜香炸鸡排', '/uploads/Menu/78468144_159.jpg', '绿野薄荷', 10);
-INSERT INTO `fa_menu` VALUES (160, '香酥鸡翅根', '/uploads/Menu/78468144_160.jpg', '花鱼儿', 1);
-INSERT INTO `fa_menu` VALUES (161, '鱼香肉丝', '/uploads/Menu/78468144_161.jpg', '个性胜过姿色', 17);
-INSERT INTO `fa_menu` VALUES (162, '菇爆鸡丁', '/uploads/Menu/78468144_162.jpg', '小耳Maggie', 5);
-INSERT INTO `fa_menu` VALUES (163, '培根金针菇卷', '/uploads/Menu/78468144_163.jpg', '眼角眉梢-格格', 16);
-INSERT INTO `fa_menu` VALUES (164, '肉片炒南瓜藤', '/uploads/Menu/78468144_164.jpg', 'Meggy跳舞的苹果', 5);
-INSERT INTO `fa_menu` VALUES (165, '冬瓜焖鸭', '/uploads/Menu/78468144_165.jpg', '美乐猪', 1);
-INSERT INTO `fa_menu` VALUES (166, '香干芹菜', '/uploads/Menu/78468144_166.jpg', 'Meggy跳舞的苹果', 12);
-INSERT INTO `fa_menu` VALUES (167, '酱爆猪肝', '/uploads/Menu/78468144_167.jpg', '我家臭猪', 8);
-INSERT INTO `fa_menu` VALUES (168, '干煸土豆里脊丝', '/uploads/Menu/78468144_168.jpg', '绿野薄荷', 16);
-INSERT INTO `fa_menu` VALUES (169, '胡萝卜炖牛肉', '/uploads/Menu/78468144_169.jpg', '爱美食的妈妈H', 2);
-INSERT INTO `fa_menu` VALUES (170, '培根芦笋卷', '/uploads/Menu/78468144_170.jpg', '斯佳丽WH', 2);
-INSERT INTO `fa_menu` VALUES (171, '香辣炒花甲', '/uploads/Menu/78468144_171.jpg', '斯佳丽WH', 16);
-INSERT INTO `fa_menu` VALUES (172, '洋葱南瓜烧秋葵', '/uploads/Menu/78468144_172.jpg', '遗忘↘蕾拉●', 13);
-INSERT INTO `fa_menu` VALUES (173, '黄番茄炒鸡蛋', '/uploads/Menu/78468144_173.jpg', 'rosejyy2000', 12);
-INSERT INTO `fa_menu` VALUES (174, '香干韭菜芽炒莲藕', '/uploads/Menu/78468144_174.jpg', '花鱼儿', 10);
-INSERT INTO `fa_menu` VALUES (175, '熏干芹菜', '/uploads/Menu/78468144_175.jpg', '猫猫家的私厨', 7);
-INSERT INTO `fa_menu` VALUES (176, '咸肉西兰花煮粉丝', '/uploads/Menu/78468144_176.jpg', '花鱼儿', 3);
-INSERT INTO `fa_menu` VALUES (177, '菌菇肉片', '/uploads/Menu/78468144_177.jpg', '宝妈小厨.', 13);
-INSERT INTO `fa_menu` VALUES (178, '滋味红烧海鳗', '/uploads/Menu/78468144_178.jpg', '微笑momo宝贝', 8);
-INSERT INTO `fa_menu` VALUES (179, '煎鱼块', '/uploads/Menu/78468144_179.jpg', '美乐猪', 13);
-INSERT INTO `fa_menu` VALUES (180, '黄焖鸡米饭', '/uploads/Menu/78468144_180.jpg', '绿野薄荷', 11);
-INSERT INTO `fa_menu` VALUES (181, '回锅肉', '/uploads/Menu/78468144_181.jpg', 'hlr02', 7);
-INSERT INTO `fa_menu` VALUES (182, '干笋烧老鸭', '/uploads/Menu/78468144_182.jpg', '舍得的美食诱惑', 6);
-INSERT INTO `fa_menu` VALUES (183, '西兰花炒螃蟹', '/uploads/Menu/78468144_183.jpg', '花鱼儿', 6);
-INSERT INTO `fa_menu` VALUES (184, '茶树菇茭白烧五花肉', '/uploads/Menu/78468144_184.jpg', '花鱼儿', 16);
-INSERT INTO `fa_menu` VALUES (185, '红三剁', '/uploads/Menu/78468144_185.jpg', '颢玥私房', 16);
-INSERT INTO `fa_menu` VALUES (186, '蛋炒江蟹', '/uploads/Menu/78468144_186.jpg', '幸福的煮妇', 17);
-INSERT INTO `fa_menu` VALUES (187, '锅蒸红烧肉', '/uploads/Menu/78468144_187.jpg', '多元中心', 2);
-INSERT INTO `fa_menu` VALUES (188, '金玉满堂', '/uploads/Menu/78468144_188.jpg', '轩雨_', 13);
-INSERT INTO `fa_menu` VALUES (189, '清炖鹅肉', '/uploads/Menu/78468144_189.jpg', '多元中心', 2);
-INSERT INTO `fa_menu` VALUES (190, '美味麻婆豆腐', '/uploads/Menu/78468144_190.jpg', '让家人体验美味', 12);
-INSERT INTO `fa_menu` VALUES (191, '孜然脆皮土豆块', '/uploads/Menu/78468144_191.jpg', '个性胜过姿色', 9);
-INSERT INTO `fa_menu` VALUES (192, '啤酒焖鱼', '/uploads/Menu/78468144_192.jpg', '手心里的宝_fWwnek', 13);
-INSERT INTO `fa_menu` VALUES (193, '香辣炒藕片儿', '/uploads/Menu/78468144_193.jpg', '允儿小妞的厨房', 8);
-INSERT INTO `fa_menu` VALUES (194, '青椒土豆丝', '/uploads/Menu/78468144_194.jpg', '芥末豆子', 1);
-INSERT INTO `fa_menu` VALUES (195, '懒人卷心菜', '/uploads/Menu/78468144_195.jpg', '夏家私享菜', 15);
-INSERT INTO `fa_menu` VALUES (196, '辣子鸡丁', '/uploads/Menu/78468144_196.jpg', 'hlr02', 14);
-INSERT INTO `fa_menu` VALUES (197, '小白菜炒淡菜', '/uploads/Menu/78468144_197.jpg', '花鱼儿', 4);
-INSERT INTO `fa_menu` VALUES (198, '五花肉炒荷兰豆', '/uploads/Menu/78468144_198.jpg', '绿野薄荷', 16);
-INSERT INTO `fa_menu` VALUES (199, '五花肉炒鲜蘑', '/uploads/Menu/78468144_199.jpg', '冬季心情', 7);
-INSERT INTO `fa_menu` VALUES (200, '三绝麻辣小龙虾', '/uploads/Menu/78468144_200.jpg', '猫猫家的私厨', 6);
-INSERT INTO `fa_menu` VALUES (201, '韭菜炒猪肝', '/uploads/Menu/78468144_201.jpg', '寒飘', 9);
-INSERT INTO `fa_menu` VALUES (202, '韭菜芽炒千张', '/uploads/Menu/78468144_202.jpg', '花鱼儿', 13);
-INSERT INTO `fa_menu` VALUES (203, '黄焖鸡', '/uploads/Menu/78468144_203.jpg', '允儿小妞的厨房', 7);
-INSERT INTO `fa_menu` VALUES (204, '五彩炒鸡蛋', '/uploads/Menu/78468144_204.jpg', '壹家食志', 7);
-INSERT INTO `fa_menu` VALUES (205, '粉蒸排骨', '/uploads/Menu/78468144_205.jpg', '捷赛私房菜', 12);
-INSERT INTO `fa_menu` VALUES (206, '培根青笋卷', '/uploads/Menu/78468144_206.jpg', 'WFMM牛妈', 10);
-INSERT INTO `fa_menu` VALUES (207, '香炸小鱼仔', '/uploads/Menu/78468144_207.jpg', '美乐猪', 8);
-INSERT INTO `fa_menu` VALUES (208, '孜然煎秋葵', '/uploads/Menu/78468144_208.jpg', 'sourcehe', 15);
-INSERT INTO `fa_menu` VALUES (209, '蒜苔炒腊肠', '/uploads/Menu/78468144_209.jpg', '雷小厨', 7);
-INSERT INTO `fa_menu` VALUES (210, '榨菜千张炒冬瓜', '/uploads/Menu/78468144_210.jpg', '花鱼儿', 14);
-INSERT INTO `fa_menu` VALUES (211, '木耳豆芽炒肉丝', '/uploads/Menu/78468144_211.jpg', '掀帘晨曦datura', 12);
-INSERT INTO `fa_menu` VALUES (212, '冰糖猪手', '/uploads/Menu/78468144_212.jpg', '鸣翠燕', 8);
-INSERT INTO `fa_menu` VALUES (213, '红烧牛肉', '/uploads/Menu/78468144_213.jpg', 'hlr02', 17);
-INSERT INTO `fa_menu` VALUES (214, '尖椒炒莲藕', '/uploads/Menu/78468144_214.jpg', '花鱼儿', 2);
-INSERT INTO `fa_menu` VALUES (215, '黄瓜炒猪肝', '/uploads/Menu/78468144_215.jpg', 'Meggy跳舞的苹果', 5);
-INSERT INTO `fa_menu` VALUES (216, '菠菜拌海虹', '/uploads/Menu/78468144_216.jpg', '政妈妈', 15);
-INSERT INTO `fa_menu` VALUES (217, '韭菜炒墨鱼仔', '/uploads/Menu/78468144_217.jpg', '壹家食志', 6);
-INSERT INTO `fa_menu` VALUES (218, '红烧鱼', '/uploads/Menu/78468144_218.jpg', '政妈妈', 14);
-INSERT INTO `fa_menu` VALUES (219, '香菇炖土豆', '/uploads/Menu/78468144_219.jpg', '政妈妈', 11);
-INSERT INTO `fa_menu` VALUES (220, '凤梨虾球', '/uploads/Menu/78468144_220.jpg', '一食半刻', 6);
-INSERT INTO `fa_menu` VALUES (221, '辣椒炒咸肉', '/uploads/Menu/78468144_221.jpg', '悦悦玉食', 10);
-INSERT INTO `fa_menu` VALUES (222, '酱猪肘子', '/uploads/Menu/78468144_222.jpg', '允儿小妞的厨房', 16);
-INSERT INTO `fa_menu` VALUES (223, '七彩时蔬鹌鹑蛋', '/uploads/Menu/78468144_223.jpg', '濠-ma-mi', 2);
-INSERT INTO `fa_menu` VALUES (224, '丝瓜炒虾仁', '/uploads/Menu/78468144_224.jpg', '心语梦境', 12);
-INSERT INTO `fa_menu` VALUES (225, '红烧鸡腿', '/uploads/Menu/78468144_225.jpg', '花鱼儿', 6);
-INSERT INTO `fa_menu` VALUES (226, '榨菜丝带豆煮冬瓜', '/uploads/Menu/78468144_226.jpg', '花鱼儿', 2);
-INSERT INTO `fa_menu` VALUES (227, '酸辣糖醋排骨', '/uploads/Menu/78468144_227.jpg', '老方小雨', 8);
-INSERT INTO `fa_menu` VALUES (228, '土豆焖鸡', '/uploads/Menu/78468144_228.jpg', '笑看天下524335751', 11);
-INSERT INTO `fa_menu` VALUES (229, '粉蒸胡萝卜', '/uploads/Menu/78468144_229.jpg', '眉儿', 7);
-INSERT INTO `fa_menu` VALUES (230, '香烤猪颈肉', '/uploads/Menu/78468144_230.jpg', '余甘果蜜', 4);
-INSERT INTO `fa_menu` VALUES (231, '水煮花蛤', '/uploads/Menu/78468144_231.jpg', '眉儿', 11);
-INSERT INTO `fa_menu` VALUES (232, '牙签肉', '/uploads/Menu/78468144_232.jpg', '眉儿', 14);
-INSERT INTO `fa_menu` VALUES (233, '五花肉焖土豆', '/uploads/Menu/78468144_233.jpg', '开心果姐姐', 16);
-INSERT INTO `fa_menu` VALUES (234, '青椒回锅肉', '/uploads/Menu/78468144_234.jpg', 'SiSi的练手记录', 14);
-INSERT INTO `fa_menu` VALUES (235, '尖椒韭菜芽炒绿豆芽', '/uploads/Menu/78468144_235.jpg', '花鱼儿', 9);
-INSERT INTO `fa_menu` VALUES (236, '八宝酿凤翼', '/uploads/Menu/78468144_236.jpg', '心煮艺的厨房', 5);
-INSERT INTO `fa_menu` VALUES (237, '香烤叉烧酱香干', '/uploads/Menu/78468144_237.jpg', 'BeiBei_Mom', 10);
-INSERT INTO `fa_menu` VALUES (238, '煎带鱼', '/uploads/Menu/78468144_238.jpg', '政妈妈', 3);
-INSERT INTO `fa_menu` VALUES (239, '苦瓜煎太阳蛋', '/uploads/Menu/78468144_239.jpg', 'sourcehe', 9);
-INSERT INTO `fa_menu` VALUES (240, '笨鸡蛋炒大葱', '/uploads/Menu/78468144_240.jpg', '贾府私房菜', 5);
-INSERT INTO `fa_menu` VALUES (241, '煎龙利鱼', '/uploads/Menu/78468144_241.jpg', '政妈妈', 6);
-INSERT INTO `fa_menu` VALUES (242, '洋葱木耳炒肉丝', '/uploads/Menu/78468144_242.jpg', 'GXL8728', 2);
-INSERT INTO `fa_menu` VALUES (243, '杂蔬鹅蛋', '/uploads/Menu/78468144_243.jpg', 'GXL8728', 13);
-INSERT INTO `fa_menu` VALUES (244, '柠檬鲜虾', '/uploads/Menu/78468144_244.jpg', '梦想家烘焙', 11);
-INSERT INTO `fa_menu` VALUES (245, '腊鸡腿煮包心菜', '/uploads/Menu/78468144_245.jpg', '花鱼儿', 4);
-INSERT INTO `fa_menu` VALUES (246, '香辣猪手烧花生', '/uploads/Menu/78468144_246.jpg', '鑫姐厨房', 3);
-INSERT INTO `fa_menu` VALUES (247, '粉丝剁椒蒸丝瓜', '/uploads/Menu/78468144_247.jpg', '鑫姐厨房', 2);
-INSERT INTO `fa_menu` VALUES (248, '夏日蜂蜜糟卤浸三宝', '/uploads/Menu/78468144_248.jpg', 'Jackylicious', 6);
-INSERT INTO `fa_menu` VALUES (249, '洋芋炒腌菜', '/uploads/Menu/78468144_249.jpg', '茶云坡', 1);
-INSERT INTO `fa_menu` VALUES (250, '黑木耳带豆煮烤麸', '/uploads/Menu/78468144_250.jpg', '花鱼儿', 12);
-INSERT INTO `fa_menu` VALUES (251, '丝瓜油条', '/uploads/Menu/78468144_251.jpg', '水墨墨', 15);
-INSERT INTO `fa_menu` VALUES (252, '煎烤鸡翅两吃', '/uploads/Menu/78468144_252.jpg', 'siyi777', 10);
-INSERT INTO `fa_menu` VALUES (253, '尖椒韭菜芽炒猪肚', '/uploads/Menu/78468144_253.jpg', '花鱼儿', 14);
-INSERT INTO `fa_menu` VALUES (254, '土豆番茄烧牛肉', '/uploads/Menu/78468144_254.jpg', '想鱼的', 5);
-INSERT INTO `fa_menu` VALUES (255, '千张炒木耳菜', '/uploads/Menu/78468144_255.jpg', '花鱼儿', 13);
-INSERT INTO `fa_menu` VALUES (256, '上汤手打鱼肉塞面筋', '/uploads/Menu/78468144_256.jpg', 'Jackylicious', 12);
-INSERT INTO `fa_menu` VALUES (257, '酸辣土豆丝', '/uploads/Menu/78468144_257.jpg', 'Meggy跳舞的苹果', 14);
-INSERT INTO `fa_menu` VALUES (258, '麻辣十三香小龙虾', '/uploads/Menu/78468144_258.jpg', '萌食志', 11);
-INSERT INTO `fa_menu` VALUES (259, '油焖鸡翅', '/uploads/Menu/78468144_259.jpg', '清水淡竹', 16);
-INSERT INTO `fa_menu` VALUES (260, '砂锅黄焖鸡', '/uploads/Menu/78468144_260.jpg', '舍得的美食诱惑', 2);
-INSERT INTO `fa_menu` VALUES (261, '花生绿豆猪脚汤', '/uploads/Menu/78468144_261.jpg', '舍得的美食诱惑', 5);
-INSERT INTO `fa_menu` VALUES (262, '肉末豇豆', '/uploads/Menu/78468144_262.jpg', 'rosejyy2000', 12);
-INSERT INTO `fa_menu` VALUES (263, '香煎虾饼', '/uploads/Menu/78468144_263.jpg', 'Suki66', 15);
-INSERT INTO `fa_menu` VALUES (264, '叉烧肉', '/uploads/Menu/78468144_264.jpg', '素年米妈厨房', 3);
-INSERT INTO `fa_menu` VALUES (265, '剁椒蒸豆角', '/uploads/Menu/78468144_265.jpg', '夏家私享菜', 1);
-INSERT INTO `fa_menu` VALUES (266, '咸蛋南瓜', '/uploads/Menu/78468144_266.jpg', 'Elin', 6);
-INSERT INTO `fa_menu` VALUES (267, '麻辣水煮肉片', '/uploads/Menu/78468144_267.jpg', '茶云坡', 11);
-INSERT INTO `fa_menu` VALUES (268, '咸蛋苦瓜', '/uploads/Menu/78468144_268.jpg', 'sunshinewinnie', 10);
-INSERT INTO `fa_menu` VALUES (269, '皮皮虾炖豆腐', '/uploads/Menu/78468144_269.jpg', '心煮艺的厨房', 8);
-INSERT INTO `fa_menu` VALUES (270, '毛豆茭白煮小油豆腐', '/uploads/Menu/78468144_270.jpg', '花鱼儿', 14);
-INSERT INTO `fa_menu` VALUES (271, '经典培根卷', '/uploads/Menu/78468144_271.jpg', '胖子瘦子我都爱', 5);
-INSERT INTO `fa_menu` VALUES (272, '海鲜菇日本豆腐', '/uploads/Menu/78468144_272.jpg', '政妈妈', 5);
-INSERT INTO `fa_menu` VALUES (273, '梅豆莲藕煮排骨', '/uploads/Menu/78468144_273.jpg', '花鱼儿', 17);
-INSERT INTO `fa_menu` VALUES (274, '椒香鸡柳', '/uploads/Menu/78468144_274.jpg', 'Meggy跳舞的苹果', 7);
-INSERT INTO `fa_menu` VALUES (275, '蒜烧冬瓜条', '/uploads/Menu/78468144_275.jpg', 'Meggy跳舞的苹果', 9);
-INSERT INTO `fa_menu` VALUES (276, '烤脆骨土豆', '/uploads/Menu/78468144_276.jpg', '政妈妈', 3);
-INSERT INTO `fa_menu` VALUES (277, '煎日本豆腐', '/uploads/Menu/78468144_277.jpg', '政妈妈', 1);
-INSERT INTO `fa_menu` VALUES (278, '香酥麻辣虾', '/uploads/Menu/78468144_278.jpg', '舍得的美食诱惑', 12);
-INSERT INTO `fa_menu` VALUES (279, '瓠子尖椒炒肉片', '/uploads/Menu/78468144_279.jpg', '掀帘晨曦datura', 2);
-INSERT INTO `fa_menu` VALUES (280, '苏式响油鳝丝', '/uploads/Menu/78468144_280.jpg', '七九星星', 13);
-INSERT INTO `fa_menu` VALUES (281, '菠菜炒牛肉', '/uploads/Menu/78468144_281.jpg', '寒飘', 2);
-INSERT INTO `fa_menu` VALUES (282, '玉翠满堂', '/uploads/Menu/78468144_282.jpg', '蜜蜜爸爸', 7);
-INSERT INTO `fa_menu` VALUES (283, '吮指腐乳花生炖猪蹄', '/uploads/Menu/78468144_283.jpg', 'jijiqucho', 8);
-INSERT INTO `fa_menu` VALUES (284, '腐竹粉丝牛筋煲', '/uploads/Menu/78468144_284.jpg', '七九星星', 12);
-INSERT INTO `fa_menu` VALUES (285, '土豆面筋烧鸡块', '/uploads/Menu/78468144_285.jpg', '七九星星', 6);
-INSERT INTO `fa_menu` VALUES (286, '豆腐饼焖肉', '/uploads/Menu/78468144_286.jpg', '橙子妈妈Eva', 17);
-INSERT INTO `fa_menu` VALUES (287, '素炒年糕', '/uploads/Menu/78468144_287.jpg', '胖熊小兔', 8);
-INSERT INTO `fa_menu` VALUES (288, '豆角杂锦烧肉丁', '/uploads/Menu/78468144_288.jpg', '掀帘晨曦datura', 11);
-INSERT INTO `fa_menu` VALUES (289, '炒疙瘩', '/uploads/Menu/78468144_289.jpg', 'Meggy跳舞的苹果', 8);
-INSERT INTO `fa_menu` VALUES (290, '素炒小白菜', '/uploads/Menu/78468144_290.jpg', '冬季心情', 6);
-INSERT INTO `fa_menu` VALUES (291, '咖喱小龙虾', '/uploads/Menu/78468144_291.jpg', '小M的厨房', 4);
-INSERT INTO `fa_menu` VALUES (292, '干锅藕片', '/uploads/Menu/78468144_292.jpg', '安娜_Anna', 17);
-INSERT INTO `fa_menu` VALUES (293, '尖椒猪肉炒茄子', '/uploads/Menu/78468144_293.jpg', '花鱼儿', 14);
-INSERT INTO `fa_menu` VALUES (294, '鸡蛋炒尖椒', '/uploads/Menu/78468144_294.jpg', 'Meggy跳舞的苹果', 4);
-INSERT INTO `fa_menu` VALUES (295, '蚝油罗氏虾', '/uploads/Menu/78468144_295.jpg', '鸣翠燕', 13);
-INSERT INTO `fa_menu` VALUES (296, '小鸡炖蘑菇', '/uploads/Menu/78468144_296.jpg', '小玲珑妈妈…', 3);
-INSERT INTO `fa_menu` VALUES (297, '红烧排骨', '/uploads/Menu/78468144_297.jpg', '蜜蜜爸爸', 2);
-INSERT INTO `fa_menu` VALUES (298, '广式叉烧', '/uploads/Menu/78468144_298.jpg', '烘焙123', 1);
-INSERT INTO `fa_menu` VALUES (299, '土豆烧素鸡', '/uploads/Menu/78468144_299.jpg', '花鱼儿', 1);
-INSERT INTO `fa_menu` VALUES (300, '咖喱素什锦', '/uploads/Menu/78468144_300.jpg', '心煮艺的厨房', 4);
-INSERT INTO `fa_menu` VALUES (301, '双味鱼', '/uploads/Menu/78468144_301.jpg', '人生就是过客', 11);
-INSERT INTO `fa_menu` VALUES (302, '番茄龙利鱼汤', '/uploads/Menu/78468144_302.jpg', '拾味十', 4);
-INSERT INTO `fa_menu` VALUES (303, '耋耄酸辣猪脚', '/uploads/Menu/78468144_303.jpg', '舍得的美食诱惑', 13);
-INSERT INTO `fa_menu` VALUES (304, '水煮牛肉', '/uploads/Menu/78468144_304.jpg', '美食侦探yk', 16);
-INSERT INTO `fa_menu` VALUES (305, '上汤娃娃菜', '/uploads/Menu/78468144_305.jpg', 'sunshinewinnie', 14);
-INSERT INTO `fa_menu` VALUES (306, '白灼香螺', '/uploads/Menu/78468144_306.jpg', '祯祯宝贝', 9);
-INSERT INTO `fa_menu` VALUES (307, '苦瓜炒牛肉', '/uploads/Menu/78468144_307.jpg', '清水淡竹', 15);
-INSERT INTO `fa_menu` VALUES (308, '啤酒鸭', '/uploads/Menu/78468144_308.jpg', 'lqmy2k', 14);
-INSERT INTO `fa_menu` VALUES (309, '鸡胗炒豆角', '/uploads/Menu/78468144_309.jpg', 'sourcehe', 5);
-INSERT INTO `fa_menu` VALUES (310, '茄子酱', '/uploads/Menu/78468144_310.jpg', '奇玉音缘', 6);
-INSERT INTO `fa_menu` VALUES (311, '肉末带豆炒年糕', '/uploads/Menu/78468144_311.jpg', '花鱼儿', 9);
-INSERT INTO `fa_menu` VALUES (312, '家常烧鲫鱼', '/uploads/Menu/78468144_312.jpg', '允儿小妞的厨房', 1);
-INSERT INTO `fa_menu` VALUES (313, '老干妈烧茄子', '/uploads/Menu/78468144_313.jpg', '斯佳丽WH', 5);
-INSERT INTO `fa_menu` VALUES (314, '红烧安康鱼肚', '/uploads/Menu/78468144_314.jpg', '奇玉音缘', 16);
-INSERT INTO `fa_menu` VALUES (315, '干锅香辣虾', '/uploads/Menu/78468144_315.jpg', '浅紫姑娘??_xLwdqU', 2);
-INSERT INTO `fa_menu` VALUES (316, '水煮鱼', '/uploads/Menu/78468144_316.jpg', '花开夕颜', 1);
-INSERT INTO `fa_menu` VALUES (317, '麻辣干锅虾', '/uploads/Menu/78468144_317.jpg', '橙子妈妈Eva', 8);
-INSERT INTO `fa_menu` VALUES (318, '盐煎肉', '/uploads/Menu/78468144_318.jpg', '秋宝恬然', 8);
-INSERT INTO `fa_menu` VALUES (319, '双椒鱼片', '/uploads/Menu/78468144_319.jpg', '我是狂草', 11);
-INSERT INTO `fa_menu` VALUES (320, '椒盐酱油虾', '/uploads/Menu/78468144_320.jpg', '寒飘', 6);
+INSERT INTO `fa_menu` VALUES (1, '香辣莲藕', '/uploads/Menu/78468144_1.jpg', '雷小厨', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (2, '海鲜秀珍菇豆腐', '/uploads/Menu/78468144_2.jpg', '花鱼儿', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (3, '紫苏土豆焖鸭', '/uploads/Menu/78468144_3.jpg', 'Suki燕儿', 3, 50, 10, '美味香甜,同嫂无欺', 1, NULL);
+INSERT INTO `fa_menu` VALUES (4, '酥炸带鱼', '/uploads/Menu/78468144_4.jpg', '夏家私享菜', 15, 50, 10, '美味香甜,同嫂无欺', 1, NULL);
+INSERT INTO `fa_menu` VALUES (5, '辣炒扁芸豆', '/uploads/Menu/78468144_5.jpg', '政妈妈', 16, 50, 10, '美味香甜,同嫂无欺', 1, NULL);
+INSERT INTO `fa_menu` VALUES (6, '蛋蒸花蛤', '/uploads/Menu/78468144_6.jpg', 'YNZAXYS_XOCKeM', 12, 50, 10, '美味香甜,同嫂无欺', 1, NULL);
+INSERT INTO `fa_menu` VALUES (7, '可乐翅中', '/uploads/Menu/78468144_7.jpg', 'YNZAXYS_XOCKeM', 13, 50, 10, '美味香甜,同嫂无欺', 1, NULL);
+INSERT INTO `fa_menu` VALUES (8, '清蒸龙利鱼柳', '/uploads/Menu/78468144_8.jpg', '宣大爷是胖妞', 6, 50, 10, '美味香甜,同嫂无欺', 1, NULL);
+INSERT INTO `fa_menu` VALUES (9, '干锅酱香蟹', '/uploads/Menu/78468144_9.jpg', 'YNZAXYS_XOCKeM', 11, 50, 10, '美味香甜,同嫂无欺', 1, NULL);
+INSERT INTO `fa_menu` VALUES (10, '西红柿炒蛋', '/uploads/Menu/78468144_10.jpg', 'YouTude精彩视频', 8, 50, 10, '美味香甜,同嫂无欺', 1, NULL);
+INSERT INTO `fa_menu` VALUES (11, '酸甜排骨', '/uploads/Menu/78468144_11.jpg', 'Elin', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (12, '荷兰豆炒五花肉', '/uploads/Menu/78468144_12.jpg', '关于小妮', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (13, '酱香杏鲍菇肉片', '/uploads/Menu/78468144_13.jpg', '二婷爱美食', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (14, '蒜蓉粉丝蒸扇贝', '/uploads/Menu/78468144_14.jpg', '马小马_CGGLmT', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (15, '葱爆羊肉', '/uploads/Menu/78468144_15.jpg', '家夏', 6, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (16, '私房浓香鸡煲', '/uploads/Menu/78468144_16.jpg', '允儿小妞的厨房', 12, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (17, '泡椒笋干回锅肉', '/uploads/Menu/78468144_17.jpg', '掀帘晨曦datura', 16, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (18, '秋葵炒虾仁', '/uploads/Menu/78468144_18.jpg', '清水淡竹', 8, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (19, '蒜蓉虾仁生蚝蒸粉丝', '/uploads/Menu/78468144_19.jpg', '宣大爷是胖妞', 7, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (20, '包菜炒粉丝', '/uploads/Menu/78468144_20.jpg', '掀帘晨曦datura', 15, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (21, '叫花鸡', '/uploads/Menu/78468144_21.jpg', '这世道☆没人道', 16, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (22, '泡椒蒸鱼', '/uploads/Menu/78468144_22.jpg', 'sourcehe', 9, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (23, '盖浇嫩豆腐', '/uploads/Menu/78468144_23.jpg', '女为悦己者而容', 2, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (24, '干煸手撕杏鲍菇', '/uploads/Menu/78468144_24.jpg', '李李小酒窝', 3, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (25, '蜜汁叉烧', '/uploads/Menu/78468144_25.jpg', '胖子瘦子我都爱', 12, 50, 10, '美味香甜,同嫂无欺', NULL, 1);
+INSERT INTO `fa_menu` VALUES (26, '香辣土豆片', '/uploads/Menu/78468144_26.jpg', '二婷爱美食', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (27, '水煮牛肉', '/uploads/Menu/78468144_27.jpg', '罗拉藏馆', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (28, '牛肉炒农家菜', '/uploads/Menu/78468144_28.jpg', 'rosejyy2000', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (29, '蒜黄木耳炒鸡蛋', '/uploads/Menu/78468144_29.jpg', 'JOJOJOJOJOJO', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (30, '麻辣牛肚百叶', '/uploads/Menu/78468144_30.jpg', '沵沵', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (31, '锅巴肉片', '/uploads/Menu/78468144_31.jpg', '个性胜过姿色', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (32, '空气炸锅版花菜', '/uploads/Menu/78468144_32.jpg', '韩优生活馆', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (33, '番茄土豆炖牛腩', '/uploads/Menu/78468144_33.jpg', '我幸福相约', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (34, '尖椒炒鸡胗', '/uploads/Menu/78468144_34.jpg', 'sourcehe', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (35, '可乐鸡翅', '/uploads/Menu/78468144_35.jpg', '陶玻网', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (36, '干烧白虾', '/uploads/Menu/78468144_36.jpg', '壹家食志', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (37, '炒土豆片', '/uploads/Menu/78468144_37.jpg', '雷小厨', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (38, '香椿炒鸡蛋', '/uploads/Menu/78468144_38.jpg', '冬季心情', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (39, '啤酒鹌鹑蛋', '/uploads/Menu/78468144_39.jpg', '食·色', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (40, '麻辣小龙虾', '/uploads/Menu/78468144_40.jpg', 'qem2000', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (41, '培根炒松花菜', '/uploads/Menu/78468144_41.jpg', '关于小妮', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (42, '酱香豆干', '/uploads/Menu/78468144_42.jpg', '眉儿', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (43, '回锅肉', '/uploads/Menu/78468144_43.jpg', '沵沵', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (44, '酸辣藕丁', '/uploads/Menu/78468144_44.jpg', '银元宝', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (45, '奥尔良烤翅', '/uploads/Menu/78468144_45.jpg', '蒙的宝', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (46, '红果茄汁焖大虾', '/uploads/Menu/78468144_46.jpg', '艳梅_h', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (47, '豆花牛肉', '/uploads/Menu/78468144_47.jpg', '遗忘↘蕾拉●', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (48, '飘香鸡翅', '/uploads/Menu/78468144_48.jpg', '四叶小馆', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (49, '桂花红糖鸡翅', '/uploads/Menu/78468144_49.jpg', '大嘴螺', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (50, '鸡汁蟹味菇', '/uploads/Menu/78468144_50.jpg', '梦悦的小灶炉', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (51, '蒜泥蒸茄子', '/uploads/Menu/78468144_51.jpg', '清水淡竹', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (52, '莲子豌豆炒虾仁', '/uploads/Menu/78468144_52.jpg', '清水淡竹', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (53, '冬瓜烧大排', '/uploads/Menu/78468144_53.jpg', '花鱼儿', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (54, '原味蒜苔排骨', '/uploads/Menu/78468144_54.jpg', 'ferrarizhun', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (55, '小白菜咸肉炒莲藕', '/uploads/Menu/78468144_55.jpg', '花鱼儿', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (56, '蒜茸空心菜', '/uploads/Menu/78468144_56.jpg', 'Meggy跳舞的苹果', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (57, '芷香鸡爪', '/uploads/Menu/78468144_57.jpg', '关于小妮', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (58, '玉米炖排骨', '/uploads/Menu/78468144_58.jpg', '舞之灵', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (59, '酸辣豆腐', '/uploads/Menu/78468144_59.jpg', '阳光明媚99', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (60, '糖醋丸子', '/uploads/Menu/78468144_60.jpg', 'twinsliuliu', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (61, '清蒸黄花鱼', '/uploads/Menu/78468144_61.jpg', '女为悦己者而容', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (62, '茄汁鱼柳', '/uploads/Menu/78468144_62.jpg', '黑猫警长kitchen', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (63, '可乐鸡翅', '/uploads/Menu/78468144_63.jpg', '随便粑粑', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (64, '咸肉炒豇豆豆干', '/uploads/Menu/78468144_64.jpg', 'rosejyy2000', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (65, '空气炸锅版蒜蓉烤基围虾', '/uploads/Menu/78468144_65.jpg', '韩优生活馆', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (66, '粉蒸排骨', '/uploads/Menu/78468144_66.jpg', '恬萝姑娘', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (67, '鲜莲子炒虾仁', '/uploads/Menu/78468144_67.jpg', '营养美食设计李晖', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (68, '夏日田园小炒', '/uploads/Menu/78468144_68.jpg', '斯佳丽WH', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (69, '无水炒青菜', '/uploads/Menu/78468144_69.jpg', '威捷朗家居', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (70, '洋葱豆角炒香干', '/uploads/Menu/78468144_70.jpg', 'lxp幸福', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (71, '炖土豆', '/uploads/Menu/78468144_71.jpg', '雷小厨', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (72, '咖喱白菜鸡翅根', '/uploads/Menu/78468144_72.jpg', '花鱼儿', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (73, '家常焖三鲜', '/uploads/Menu/78468144_73.jpg', '贾府私房菜', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (74, '凤梨炒虾仁', '/uploads/Menu/78468144_74.jpg', '寒飘', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (75, '孜然麻辣小土豆', '/uploads/Menu/78468144_75.jpg', '猫猫家的私厨', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (76, '韭菜花炒蛏子', '/uploads/Menu/78468144_76.jpg', '花鱼儿', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (77, '干锅香辣鸭翅', '/uploads/Menu/78468144_77.jpg', '允儿小妞的厨房', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (78, '红烧肉烧笋', '/uploads/Menu/78468144_78.jpg', '舞之灵', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (79, '辣椒酱焖老豆腐', '/uploads/Menu/78468144_79.jpg', '黑猫警长kitchen', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (80, '豉香莲藕鲜虾', '/uploads/Menu/78468144_80.jpg', '花鱼儿', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (81, '豆豉鲮鱼油麦菜', '/uploads/Menu/78468144_81.jpg', 'hlr02', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (82, '咸肉卷心菜炒粉丝', '/uploads/Menu/78468144_82.jpg', '悦悦玉食', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (83, '葱烧鸡腿', '/uploads/Menu/78468144_83.jpg', '悦悦玉食', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (84, '韭菜炒鱿鱼', '/uploads/Menu/78468144_84.jpg', '冬季心情', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (85, '茄汁鸡蛋老豆腐', '/uploads/Menu/78468144_85.jpg', 'rosejyy2000', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (86, '百花酿茄子', '/uploads/Menu/78468144_86.jpg', '遗忘↘蕾拉●', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (87, '麻婆肉末白菜', '/uploads/Menu/78468144_87.jpg', '花鱼儿', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (88, '干煎小平鱼', '/uploads/Menu/78468144_88.jpg', '演堃@杨爸爸', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (89, '白萝卜炖排骨', '/uploads/Menu/78468144_89.jpg', 'Meggy跳舞的苹果', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (90, '豆腐圆子', '/uploads/Menu/78468144_90.jpg', '紫嫣秀儿', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (91, '清蒸帝王蟹', '/uploads/Menu/78468144_91.jpg', '翟女……', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (92, '泡椒猪肝', '/uploads/Menu/78468144_92.jpg', '人生就是过客', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (93, '酱香肉沫蒸茄子', '/uploads/Menu/78468144_93.jpg', '我家臭猪', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (94, '咖喱里脊肉豆腐', '/uploads/Menu/78468144_94.jpg', '花鱼儿', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (95, '酱鸡翅根', '/uploads/Menu/78468144_95.jpg', '我的美食我做主77', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (96, '家常麻婆豆腐', '/uploads/Menu/78468144_96.jpg', '眉儿', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (97, '青豆炒肉末', '/uploads/Menu/78468144_97.jpg', '二婷爱美食', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (98, '豆角焖面', '/uploads/Menu/78468144_98.jpg', '个性胜过姿色', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (99, '葱香蛏子', '/uploads/Menu/78468144_99.jpg', '美乐猪', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (100, '家常版梅干菜扣肉', '/uploads/Menu/78468144_100.jpg', '小诺厨娘', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (101, '鱼香肉丝', '/uploads/Menu/78468144_101.jpg', '心语梦境', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (102, '有机花菜炒花肉', '/uploads/Menu/78468144_102.jpg', '黑猫警长kitchen', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (103, '剁椒魚頭', '/uploads/Menu/78468144_103.jpg', '蔡礼城', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (104, '尖椒猪肉炒酸菜', '/uploads/Menu/78468144_104.jpg', '花鱼儿', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (105, '家烧粉丝小黄鱼', '/uploads/Menu/78468144_105.jpg', '夏家私享菜', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (106, '香椿炒鸡蛋', '/uploads/Menu/78468144_106.jpg', 'Meggy跳舞的苹果', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (107, '蒜蓉娃娃菜', '/uploads/Menu/78468144_107.jpg', '美乐猪', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (108, '粉蒸土豆丝', '/uploads/Menu/78468144_108.jpg', '个性胜过姿色', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (109, '圆白菜炒粉条', '/uploads/Menu/78468144_109.jpg', '宝妈小厨.', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (110, '蚝油烧豆腐', '/uploads/Menu/78468144_110.jpg', '宝妈小厨.', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (111, '家常炖鱼', '/uploads/Menu/78468144_111.jpg', '宝妈小厨.', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (112, '素炒茼蒿', '/uploads/Menu/78468144_112.jpg', '冬季心情', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (113, '香葱土豆', '/uploads/Menu/78468144_113.jpg', 'sourcehe', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (114, '蒜苗豆腐', '/uploads/Menu/78468144_114.jpg', '美乐猪', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (115, '鸡翅炖胡萝卜', '/uploads/Menu/78468144_115.jpg', '蒲的贪吃老爸', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (116, '苦瓜酿土豆泥', '/uploads/Menu/78468144_116.jpg', '大嘴螺', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (117, '灯笼茄子', '/uploads/Menu/78468144_117.jpg', '安娜_Anna', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (118, '酸辣土豆丝', '/uploads/Menu/78468144_118.jpg', 'Elin', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (119, '鱼香素鸡', '/uploads/Menu/78468144_119.jpg', '悦悦玉食', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (120, '家常美味千页豆腐', '/uploads/Menu/78468144_120.jpg', '掀帘晨曦datura', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (121, '卤水鱼', '/uploads/Menu/78468144_121.jpg', '人生就是过客', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (122, '糖衣莲子', '/uploads/Menu/78468144_122.jpg', '七九星星', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (123, '玉米焖牛肉', '/uploads/Menu/78468144_123.jpg', 'sunshinewinnie', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (124, '粉蒸胡萝卜丝', '/uploads/Menu/78468144_124.jpg', '个性胜过姿色', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (125, '茄汁黄豆炖牛肉', '/uploads/Menu/78468144_125.jpg', '政妈妈', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (126, '山蘑菇炖鸡', '/uploads/Menu/78468144_126.jpg', '政妈妈', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (127, '肉沫茄子', '/uploads/Menu/78468144_127.jpg', '雷小厨', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (128, '土豆啤酒鸭', '/uploads/Menu/78468144_128.jpg', '悦悦玉食', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (129, '鲜香板栗红烧肉', '/uploads/Menu/78468144_129.jpg', '陶玻网', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (130, '菠菜炒鸡蛋', '/uploads/Menu/78468144_130.jpg', '掀帘晨曦datura', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (131, '爆炒花蛤', '/uploads/Menu/78468144_131.jpg', '家夏', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (132, '金沙鸡翅', '/uploads/Menu/78468144_132.jpg', '安宝的虎妈', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (133, '猪颈肉炒西瓜皮', '/uploads/Menu/78468144_133.jpg', 'rosejyy2000', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (134, '蒜蓉椒香空心菜', '/uploads/Menu/78468144_134.jpg', '掀帘晨曦datura', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (135, '红烧排骨', '/uploads/Menu/78468144_135.jpg', '安宝的虎妈', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (136, '茄汁卷心菜炖鸡肉', '/uploads/Menu/78468144_136.jpg', '遗忘↘蕾拉●', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (137, '咖喱小龙虾', '/uploads/Menu/78468144_137.jpg', '天天的呀', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (138, '丝瓜炒鸡蛋', '/uploads/Menu/78468144_138.jpg', '美乐猪', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (139, '秋葵煎皖鱼', '/uploads/Menu/78468144_139.jpg', 'sourcehe', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (140, '川味啤酒鱼', '/uploads/Menu/78468144_140.jpg', '人生就是过客', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (141, '辣炒花蛤', '/uploads/Menu/78468144_141.jpg', '乐悠厨房', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (142, '生蚝鸡蛋饼', '/uploads/Menu/78468144_142.jpg', '寒飘', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (143, '炸酱油鸡翅根', '/uploads/Menu/78468144_143.jpg', '花鱼儿', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (144, '肉丝苦瓜', '/uploads/Menu/78468144_144.jpg', '清水鱼翅', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (145, '豆腐炒秋葵', '/uploads/Menu/78468144_145.jpg', '清水淡竹', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (146, '素炒豆角黑木耳', '/uploads/Menu/78468144_146.jpg', 'Meggy跳舞的苹果', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (147, '花生米茶树菇烤麸', '/uploads/Menu/78468144_147.jpg', '花鱼儿', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (148, '辣酱爆鱿鱼', '/uploads/Menu/78468144_148.jpg', '眉儿', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (149, '三鲜鳝丝', '/uploads/Menu/78468144_149.jpg', '舍得的美食诱惑', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (150, '酱焖白豆腐干', '/uploads/Menu/78468144_150.jpg', '允儿小妞的厨房', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (151, '炸锅版日式可乐饼', '/uploads/Menu/78468144_151.jpg', '韩优生活馆', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (152, '鲜香肉末炒粒粒', '/uploads/Menu/78468144_152.jpg', '掀帘晨曦datura', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (153, '尖椒白萝卜炒肉丝', '/uploads/Menu/78468144_153.jpg', '掀帘晨曦datura', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (154, '番茄酱煎鱼', '/uploads/Menu/78468144_154.jpg', 'sourcehe', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (155, '排骨烩菜', '/uploads/Menu/78468144_155.jpg', 'nuomama522', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (156, '丝瓜酿肉', '/uploads/Menu/78468144_156.jpg', '威捷朗家居', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (157, '荷叶蒸排骨', '/uploads/Menu/78468144_157.jpg', 'hlr02', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (158, '绿豆芽炒韭菜', '/uploads/Menu/78468144_158.jpg', '绿野薄荷', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (159, '蒜香炸鸡排', '/uploads/Menu/78468144_159.jpg', '绿野薄荷', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (160, '香酥鸡翅根', '/uploads/Menu/78468144_160.jpg', '花鱼儿', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (161, '鱼香肉丝', '/uploads/Menu/78468144_161.jpg', '个性胜过姿色', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (162, '菇爆鸡丁', '/uploads/Menu/78468144_162.jpg', '小耳Maggie', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (163, '培根金针菇卷', '/uploads/Menu/78468144_163.jpg', '眼角眉梢-格格', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (164, '肉片炒南瓜藤', '/uploads/Menu/78468144_164.jpg', 'Meggy跳舞的苹果', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (165, '冬瓜焖鸭', '/uploads/Menu/78468144_165.jpg', '美乐猪', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (166, '香干芹菜', '/uploads/Menu/78468144_166.jpg', 'Meggy跳舞的苹果', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (167, '酱爆猪肝', '/uploads/Menu/78468144_167.jpg', '我家臭猪', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (168, '干煸土豆里脊丝', '/uploads/Menu/78468144_168.jpg', '绿野薄荷', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (169, '胡萝卜炖牛肉', '/uploads/Menu/78468144_169.jpg', '爱美食的妈妈H', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (170, '培根芦笋卷', '/uploads/Menu/78468144_170.jpg', '斯佳丽WH', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (171, '香辣炒花甲', '/uploads/Menu/78468144_171.jpg', '斯佳丽WH', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (172, '洋葱南瓜烧秋葵', '/uploads/Menu/78468144_172.jpg', '遗忘↘蕾拉●', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (173, '黄番茄炒鸡蛋', '/uploads/Menu/78468144_173.jpg', 'rosejyy2000', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (174, '香干韭菜芽炒莲藕', '/uploads/Menu/78468144_174.jpg', '花鱼儿', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (175, '熏干芹菜', '/uploads/Menu/78468144_175.jpg', '猫猫家的私厨', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (176, '咸肉西兰花煮粉丝', '/uploads/Menu/78468144_176.jpg', '花鱼儿', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (177, '菌菇肉片', '/uploads/Menu/78468144_177.jpg', '宝妈小厨.', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (178, '滋味红烧海鳗', '/uploads/Menu/78468144_178.jpg', '微笑momo宝贝', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (179, '煎鱼块', '/uploads/Menu/78468144_179.jpg', '美乐猪', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (180, '黄焖鸡米饭', '/uploads/Menu/78468144_180.jpg', '绿野薄荷', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (181, '回锅肉', '/uploads/Menu/78468144_181.jpg', 'hlr02', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (182, '干笋烧老鸭', '/uploads/Menu/78468144_182.jpg', '舍得的美食诱惑', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (183, '西兰花炒螃蟹', '/uploads/Menu/78468144_183.jpg', '花鱼儿', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (184, '茶树菇茭白烧五花肉', '/uploads/Menu/78468144_184.jpg', '花鱼儿', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (185, '红三剁', '/uploads/Menu/78468144_185.jpg', '颢玥私房', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (186, '蛋炒江蟹', '/uploads/Menu/78468144_186.jpg', '幸福的煮妇', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (187, '锅蒸红烧肉', '/uploads/Menu/78468144_187.jpg', '多元中心', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (188, '金玉满堂', '/uploads/Menu/78468144_188.jpg', '轩雨_', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (189, '清炖鹅肉', '/uploads/Menu/78468144_189.jpg', '多元中心', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (190, '美味麻婆豆腐', '/uploads/Menu/78468144_190.jpg', '让家人体验美味', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (191, '孜然脆皮土豆块', '/uploads/Menu/78468144_191.jpg', '个性胜过姿色', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (192, '啤酒焖鱼', '/uploads/Menu/78468144_192.jpg', '手心里的宝_fWwnek', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (193, '香辣炒藕片儿', '/uploads/Menu/78468144_193.jpg', '允儿小妞的厨房', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (194, '青椒土豆丝', '/uploads/Menu/78468144_194.jpg', '芥末豆子', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (195, '懒人卷心菜', '/uploads/Menu/78468144_195.jpg', '夏家私享菜', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (196, '辣子鸡丁', '/uploads/Menu/78468144_196.jpg', 'hlr02', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (197, '小白菜炒淡菜', '/uploads/Menu/78468144_197.jpg', '花鱼儿', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (198, '五花肉炒荷兰豆', '/uploads/Menu/78468144_198.jpg', '绿野薄荷', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (199, '五花肉炒鲜蘑', '/uploads/Menu/78468144_199.jpg', '冬季心情', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (200, '三绝麻辣小龙虾', '/uploads/Menu/78468144_200.jpg', '猫猫家的私厨', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (201, '韭菜炒猪肝', '/uploads/Menu/78468144_201.jpg', '寒飘', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (202, '韭菜芽炒千张', '/uploads/Menu/78468144_202.jpg', '花鱼儿', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (203, '黄焖鸡', '/uploads/Menu/78468144_203.jpg', '允儿小妞的厨房', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (204, '五彩炒鸡蛋', '/uploads/Menu/78468144_204.jpg', '壹家食志', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (205, '粉蒸排骨', '/uploads/Menu/78468144_205.jpg', '捷赛私房菜', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (206, '培根青笋卷', '/uploads/Menu/78468144_206.jpg', 'WFMM牛妈', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (207, '香炸小鱼仔', '/uploads/Menu/78468144_207.jpg', '美乐猪', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (208, '孜然煎秋葵', '/uploads/Menu/78468144_208.jpg', 'sourcehe', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (209, '蒜苔炒腊肠', '/uploads/Menu/78468144_209.jpg', '雷小厨', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (210, '榨菜千张炒冬瓜', '/uploads/Menu/78468144_210.jpg', '花鱼儿', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (211, '木耳豆芽炒肉丝', '/uploads/Menu/78468144_211.jpg', '掀帘晨曦datura', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (212, '冰糖猪手', '/uploads/Menu/78468144_212.jpg', '鸣翠燕', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (213, '红烧牛肉', '/uploads/Menu/78468144_213.jpg', 'hlr02', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (214, '尖椒炒莲藕', '/uploads/Menu/78468144_214.jpg', '花鱼儿', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (215, '黄瓜炒猪肝', '/uploads/Menu/78468144_215.jpg', 'Meggy跳舞的苹果', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (216, '菠菜拌海虹', '/uploads/Menu/78468144_216.jpg', '政妈妈', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (217, '韭菜炒墨鱼仔', '/uploads/Menu/78468144_217.jpg', '壹家食志', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (218, '红烧鱼', '/uploads/Menu/78468144_218.jpg', '政妈妈', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (219, '香菇炖土豆', '/uploads/Menu/78468144_219.jpg', '政妈妈', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (220, '凤梨虾球', '/uploads/Menu/78468144_220.jpg', '一食半刻', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (221, '辣椒炒咸肉', '/uploads/Menu/78468144_221.jpg', '悦悦玉食', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (222, '酱猪肘子', '/uploads/Menu/78468144_222.jpg', '允儿小妞的厨房', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (223, '七彩时蔬鹌鹑蛋', '/uploads/Menu/78468144_223.jpg', '濠-ma-mi', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (224, '丝瓜炒虾仁', '/uploads/Menu/78468144_224.jpg', '心语梦境', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (225, '红烧鸡腿', '/uploads/Menu/78468144_225.jpg', '花鱼儿', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (226, '榨菜丝带豆煮冬瓜', '/uploads/Menu/78468144_226.jpg', '花鱼儿', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (227, '酸辣糖醋排骨', '/uploads/Menu/78468144_227.jpg', '老方小雨', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (228, '土豆焖鸡', '/uploads/Menu/78468144_228.jpg', '笑看天下524335751', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (229, '粉蒸胡萝卜', '/uploads/Menu/78468144_229.jpg', '眉儿', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (230, '香烤猪颈肉', '/uploads/Menu/78468144_230.jpg', '余甘果蜜', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (231, '水煮花蛤', '/uploads/Menu/78468144_231.jpg', '眉儿', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (232, '牙签肉', '/uploads/Menu/78468144_232.jpg', '眉儿', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (233, '五花肉焖土豆', '/uploads/Menu/78468144_233.jpg', '开心果姐姐', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (234, '青椒回锅肉', '/uploads/Menu/78468144_234.jpg', 'SiSi的练手记录', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (235, '尖椒韭菜芽炒绿豆芽', '/uploads/Menu/78468144_235.jpg', '花鱼儿', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (236, '八宝酿凤翼', '/uploads/Menu/78468144_236.jpg', '心煮艺的厨房', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (237, '香烤叉烧酱香干', '/uploads/Menu/78468144_237.jpg', 'BeiBei_Mom', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (238, '煎带鱼', '/uploads/Menu/78468144_238.jpg', '政妈妈', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (239, '苦瓜煎太阳蛋', '/uploads/Menu/78468144_239.jpg', 'sourcehe', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (240, '笨鸡蛋炒大葱', '/uploads/Menu/78468144_240.jpg', '贾府私房菜', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (241, '煎龙利鱼', '/uploads/Menu/78468144_241.jpg', '政妈妈', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (242, '洋葱木耳炒肉丝', '/uploads/Menu/78468144_242.jpg', 'GXL8728', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (243, '杂蔬鹅蛋', '/uploads/Menu/78468144_243.jpg', 'GXL8728', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (244, '柠檬鲜虾', '/uploads/Menu/78468144_244.jpg', '梦想家烘焙', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (245, '腊鸡腿煮包心菜', '/uploads/Menu/78468144_245.jpg', '花鱼儿', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (246, '香辣猪手烧花生', '/uploads/Menu/78468144_246.jpg', '鑫姐厨房', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (247, '粉丝剁椒蒸丝瓜', '/uploads/Menu/78468144_247.jpg', '鑫姐厨房', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (248, '夏日蜂蜜糟卤浸三宝', '/uploads/Menu/78468144_248.jpg', 'Jackylicious', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (249, '洋芋炒腌菜', '/uploads/Menu/78468144_249.jpg', '茶云坡', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (250, '黑木耳带豆煮烤麸', '/uploads/Menu/78468144_250.jpg', '花鱼儿', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (251, '丝瓜油条', '/uploads/Menu/78468144_251.jpg', '水墨墨', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (252, '煎烤鸡翅两吃', '/uploads/Menu/78468144_252.jpg', 'siyi777', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (253, '尖椒韭菜芽炒猪肚', '/uploads/Menu/78468144_253.jpg', '花鱼儿', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (254, '土豆番茄烧牛肉', '/uploads/Menu/78468144_254.jpg', '想鱼的', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (255, '千张炒木耳菜', '/uploads/Menu/78468144_255.jpg', '花鱼儿', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (256, '上汤手打鱼肉塞面筋', '/uploads/Menu/78468144_256.jpg', 'Jackylicious', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (257, '酸辣土豆丝', '/uploads/Menu/78468144_257.jpg', 'Meggy跳舞的苹果', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (258, '麻辣十三香小龙虾', '/uploads/Menu/78468144_258.jpg', '萌食志', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (259, '油焖鸡翅', '/uploads/Menu/78468144_259.jpg', '清水淡竹', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (260, '砂锅黄焖鸡', '/uploads/Menu/78468144_260.jpg', '舍得的美食诱惑', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (261, '花生绿豆猪脚汤', '/uploads/Menu/78468144_261.jpg', '舍得的美食诱惑', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (262, '肉末豇豆', '/uploads/Menu/78468144_262.jpg', 'rosejyy2000', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (263, '香煎虾饼', '/uploads/Menu/78468144_263.jpg', 'Suki66', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (264, '叉烧肉', '/uploads/Menu/78468144_264.jpg', '素年米妈厨房', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (265, '剁椒蒸豆角', '/uploads/Menu/78468144_265.jpg', '夏家私享菜', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (266, '咸蛋南瓜', '/uploads/Menu/78468144_266.jpg', 'Elin', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (267, '麻辣水煮肉片', '/uploads/Menu/78468144_267.jpg', '茶云坡', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (268, '咸蛋苦瓜', '/uploads/Menu/78468144_268.jpg', 'sunshinewinnie', 10, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (269, '皮皮虾炖豆腐', '/uploads/Menu/78468144_269.jpg', '心煮艺的厨房', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (270, '毛豆茭白煮小油豆腐', '/uploads/Menu/78468144_270.jpg', '花鱼儿', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (271, '经典培根卷', '/uploads/Menu/78468144_271.jpg', '胖子瘦子我都爱', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (272, '海鲜菇日本豆腐', '/uploads/Menu/78468144_272.jpg', '政妈妈', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (273, '梅豆莲藕煮排骨', '/uploads/Menu/78468144_273.jpg', '花鱼儿', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (274, '椒香鸡柳', '/uploads/Menu/78468144_274.jpg', 'Meggy跳舞的苹果', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (275, '蒜烧冬瓜条', '/uploads/Menu/78468144_275.jpg', 'Meggy跳舞的苹果', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (276, '烤脆骨土豆', '/uploads/Menu/78468144_276.jpg', '政妈妈', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (277, '煎日本豆腐', '/uploads/Menu/78468144_277.jpg', '政妈妈', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (278, '香酥麻辣虾', '/uploads/Menu/78468144_278.jpg', '舍得的美食诱惑', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (279, '瓠子尖椒炒肉片', '/uploads/Menu/78468144_279.jpg', '掀帘晨曦datura', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (280, '苏式响油鳝丝', '/uploads/Menu/78468144_280.jpg', '七九星星', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (281, '菠菜炒牛肉', '/uploads/Menu/78468144_281.jpg', '寒飘', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (282, '玉翠满堂', '/uploads/Menu/78468144_282.jpg', '蜜蜜爸爸', 7, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (283, '吮指腐乳花生炖猪蹄', '/uploads/Menu/78468144_283.jpg', 'jijiqucho', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (284, '腐竹粉丝牛筋煲', '/uploads/Menu/78468144_284.jpg', '七九星星', 12, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (285, '土豆面筋烧鸡块', '/uploads/Menu/78468144_285.jpg', '七九星星', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (286, '豆腐饼焖肉', '/uploads/Menu/78468144_286.jpg', '橙子妈妈Eva', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (287, '素炒年糕', '/uploads/Menu/78468144_287.jpg', '胖熊小兔', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (288, '豆角杂锦烧肉丁', '/uploads/Menu/78468144_288.jpg', '掀帘晨曦datura', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (289, '炒疙瘩', '/uploads/Menu/78468144_289.jpg', 'Meggy跳舞的苹果', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (290, '素炒小白菜', '/uploads/Menu/78468144_290.jpg', '冬季心情', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (291, '咖喱小龙虾', '/uploads/Menu/78468144_291.jpg', '小M的厨房', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (292, '干锅藕片', '/uploads/Menu/78468144_292.jpg', '安娜_Anna', 17, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (293, '尖椒猪肉炒茄子', '/uploads/Menu/78468144_293.jpg', '花鱼儿', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (294, '鸡蛋炒尖椒', '/uploads/Menu/78468144_294.jpg', 'Meggy跳舞的苹果', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (295, '蚝油罗氏虾', '/uploads/Menu/78468144_295.jpg', '鸣翠燕', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (296, '小鸡炖蘑菇', '/uploads/Menu/78468144_296.jpg', '小玲珑妈妈…', 3, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (297, '红烧排骨', '/uploads/Menu/78468144_297.jpg', '蜜蜜爸爸', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (298, '广式叉烧', '/uploads/Menu/78468144_298.jpg', '烘焙123', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (299, '土豆烧素鸡', '/uploads/Menu/78468144_299.jpg', '花鱼儿', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (300, '咖喱素什锦', '/uploads/Menu/78468144_300.jpg', '心煮艺的厨房', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (301, '双味鱼', '/uploads/Menu/78468144_301.jpg', '人生就是过客', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (302, '番茄龙利鱼汤', '/uploads/Menu/78468144_302.jpg', '拾味十', 4, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (303, '耋耄酸辣猪脚', '/uploads/Menu/78468144_303.jpg', '舍得的美食诱惑', 13, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (304, '水煮牛肉', '/uploads/Menu/78468144_304.jpg', '美食侦探yk', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (305, '上汤娃娃菜', '/uploads/Menu/78468144_305.jpg', 'sunshinewinnie', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (306, '白灼香螺', '/uploads/Menu/78468144_306.jpg', '祯祯宝贝', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (307, '苦瓜炒牛肉', '/uploads/Menu/78468144_307.jpg', '清水淡竹', 15, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (308, '啤酒鸭', '/uploads/Menu/78468144_308.jpg', 'lqmy2k', 14, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (309, '鸡胗炒豆角', '/uploads/Menu/78468144_309.jpg', 'sourcehe', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (310, '茄子酱', '/uploads/Menu/78468144_310.jpg', '奇玉音缘', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (311, '肉末带豆炒年糕', '/uploads/Menu/78468144_311.jpg', '花鱼儿', 9, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (312, '家常烧鲫鱼', '/uploads/Menu/78468144_312.jpg', '允儿小妞的厨房', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (313, '老干妈烧茄子', '/uploads/Menu/78468144_313.jpg', '斯佳丽WH', 5, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (314, '红烧安康鱼肚', '/uploads/Menu/78468144_314.jpg', '奇玉音缘', 16, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (315, '干锅香辣虾', '/uploads/Menu/78468144_315.jpg', '浅紫姑娘??_xLwdqU', 2, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (316, '水煮鱼', '/uploads/Menu/78468144_316.jpg', '花开夕颜', 1, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (317, '麻辣干锅虾', '/uploads/Menu/78468144_317.jpg', '橙子妈妈Eva', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (318, '盐煎肉', '/uploads/Menu/78468144_318.jpg', '秋宝恬然', 8, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (319, '双椒鱼片', '/uploads/Menu/78468144_319.jpg', '我是狂草', 11, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
+INSERT INTO `fa_menu` VALUES (320, '椒盐酱油虾', '/uploads/Menu/78468144_320.jpg', '寒飘', 6, 50, 10, '美味香甜,同嫂无欺', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for fa_menu_class
@@ -743,29 +759,31 @@ DROP TABLE IF EXISTS `fa_menu_class`;
 CREATE TABLE `fa_menu_class`  (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '菜品类型',
+  `img` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT '菜品类型图片',
+  `is_navdata` smallint(1) NULL DEFAULT NULL COMMENT '是否为推荐',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = MyISAM AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fa_menu_class
 -- ----------------------------
-INSERT INTO `fa_menu_class` VALUES (1, '川菜');
-INSERT INTO `fa_menu_class` VALUES (2, '鲁菜');
-INSERT INTO `fa_menu_class` VALUES (3, '粤菜');
-INSERT INTO `fa_menu_class` VALUES (4, '淮扬菜');
-INSERT INTO `fa_menu_class` VALUES (5, '浙菜');
-INSERT INTO `fa_menu_class` VALUES (6, '闽菜');
-INSERT INTO `fa_menu_class` VALUES (7, '湘菜');
-INSERT INTO `fa_menu_class` VALUES (8, '徽菜');
-INSERT INTO `fa_menu_class` VALUES (9, '东北菜');
-INSERT INTO `fa_menu_class` VALUES (10, '冀菜');
-INSERT INTO `fa_menu_class` VALUES (11, '豫菜');
-INSERT INTO `fa_menu_class` VALUES (12, '鄂菜');
-INSERT INTO `fa_menu_class` VALUES (13, '本帮菜');
-INSERT INTO `fa_menu_class` VALUES (14, '客家菜');
-INSERT INTO `fa_menu_class` VALUES (15, '赣菜');
-INSERT INTO `fa_menu_class` VALUES (16, '京菜');
-INSERT INTO `fa_menu_class` VALUES (17, '清真菜');
+INSERT INTO `fa_menu_class` VALUES (1, '川菜', '/uploads/Menu/78468144_11.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (2, '鲁菜', '/uploads/Menu/78468144_12.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (3, '粤菜', '/uploads/Menu/78468144_13.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (4, '淮扬菜', '/uploads/Menu/78468144_14.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (5, '浙菜', '/uploads/Menu/78468144_15.jpg', 1);
+INSERT INTO `fa_menu_class` VALUES (6, '闽菜', '/uploads/Menu/78468144_16.jpg', 1);
+INSERT INTO `fa_menu_class` VALUES (7, '湘菜', '/uploads/Menu/78468144_17.jpg', 1);
+INSERT INTO `fa_menu_class` VALUES (8, '徽菜', '/uploads/Menu/78468144_18.jpg', 1);
+INSERT INTO `fa_menu_class` VALUES (9, '东北菜', '/uploads/Menu/78468144_19.jpg', 1);
+INSERT INTO `fa_menu_class` VALUES (10, '冀菜', '/uploads/Menu/78468144_20.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (11, '豫菜', '/uploads/Menu/78468144_21.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (12, '鄂菜', '/uploads/Menu/78468144_22.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (13, '本帮菜', '/uploads/Menu/78468144_23.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (14, '客家菜', '/uploads/Menu/78468144_24.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (15, '赣菜', '/uploads/Menu/78468144_25.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (16, '京菜', '/uploads/Menu/78468144_26.jpg', NULL);
+INSERT INTO `fa_menu_class` VALUES (17, '清真菜', '/uploads/Menu/78468144_27.jpg', NULL);
 
 -- ----------------------------
 -- Table structure for fa_menu_copy1
@@ -1104,6 +1122,51 @@ INSERT INTO `fa_menu_copy1` VALUES (319, '双椒鱼片', 'http://image99.360doc.
 INSERT INTO `fa_menu_copy1` VALUES (320, '椒盐酱油虾', 'http://image99.360doc.com/DownloadImg/2016/08/2210/78468144_320.jpg', '寒飘');
 
 -- ----------------------------
+-- Table structure for fa_order_form
+-- ----------------------------
+DROP TABLE IF EXISTS `fa_order_form`;
+CREATE TABLE `fa_order_form`  (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `desk_id` int(10) NULL DEFAULT NULL COMMENT '桌号',
+  `user` int(10) NULL DEFAULT NULL COMMENT '用户id',
+  `status` smallint(1) NULL DEFAULT NULL COMMENT '状态',
+  `sum` int(10) NULL DEFAULT NULL COMMENT '总金额',
+  `start_time` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '开始时间',
+  `end_time` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '结束时间',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '桌子表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fa_order_form
+-- ----------------------------
+INSERT INTO `fa_order_form` VALUES (1, 1, 14, 2, 1000, '1614319483', '1614331051');
+INSERT INTO `fa_order_form` VALUES (2, 1, 14, 2, 50, '1614330927', '1614331161');
+INSERT INTO `fa_order_form` VALUES (3, 3, 14, 2, 150, '1614331196', '1614331223');
+INSERT INTO `fa_order_form` VALUES (4, 1, 14, 1, NULL, '1614333599', NULL);
+
+-- ----------------------------
+-- Table structure for fa_order_form_info
+-- ----------------------------
+DROP TABLE IF EXISTS `fa_order_form_info`;
+CREATE TABLE `fa_order_form_info`  (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `order` int(10) NULL DEFAULT NULL COMMENT '订单号',
+  `menu` int(10) NULL DEFAULT NULL COMMENT '菜单名',
+  `num` int(10) NULL DEFAULT NULL COMMENT '数量',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = MyISAM AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Fixed;
+
+-- ----------------------------
+-- Records of fa_order_form_info
+-- ----------------------------
+INSERT INTO `fa_order_form_info` VALUES (1, 1, 1, 20);
+INSERT INTO `fa_order_form_info` VALUES (2, 2, 160, 1);
+INSERT INTO `fa_order_form_info` VALUES (3, 3, 152, 1);
+INSERT INTO `fa_order_form_info` VALUES (4, 3, 94, 1);
+INSERT INTO `fa_order_form_info` VALUES (5, 3, 249, 1);
+INSERT INTO `fa_order_form_info` VALUES (6, 4, 40, 1);
+
+-- ----------------------------
 -- Table structure for fa_sms
 -- ----------------------------
 DROP TABLE IF EXISTS `fa_sms`;
@@ -1224,14 +1287,14 @@ CREATE TABLE `fa_user`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `username`(`username`) USING BTREE,
   INDEX `email`(`email`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '会员表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci COMMENT = '会员表' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fa_user
 -- ----------------------------
 INSERT INTO `fa_user` VALUES (1, 1, 'admin', 'admin', '13d496542c01914203a3094359f332e9', '792172', 'admin@163.com', '13888888888', '', 0, 0, '2017-04-15', '', 0.00, 0, 1, 1, 1516170492, 1516171614, '127.0.0.1', 0, '127.0.0.1', 1491461418, 0, 1516171614, '', 'normal', '', NULL);
 INSERT INTO `fa_user` VALUES (3, 0, 'demo', 'demo', 'c1505b7108adb91f5bf5c65c2588412c', '5JpAKD', '645418484@qq.com', '', '', 1, 0, NULL, '', 0.00, 0, 1, 1, 1614235632, 1614235632, '127.0.0.1', 0, '127.0.0.1', 1614235632, 1614235632, 1614235632, '', 'normal', '', NULL);
-INSERT INTO `fa_user` VALUES (5, 0, NULL, 'wx603764719f4e4', 'f7af9f6e5456959686923693f338abf4', 'TnHohC', '', '', '', 1, 0, NULL, '', 0.00, 0, 1, 1, 1614243320, 1614243322, '127.0.0.1', 0, '127.0.0.1', 1614242929, 1614242929, 1614243322, '', 'normal', '', 'oHaTX5artgrxJDrLX-SelI5RgfM8');
+INSERT INTO `fa_user` VALUES (14, 0, '🇭 🇪 🇦 🇷 🇹', '🇭 🇪 🇦 🇷 🇹', '10cadba5d2f5cffd9f057fff8a2f2f13', 'GHhfF3', '', '', '', 1, 0, NULL, '', 99999999.99, 0, 1, 1, 1614334422, 1614334428, '127.0.0.1', 0, '127.0.0.1', 1614333265, 1614333265, 1614334428, '', 'normal', '', 'oHaTX5artgrxJDrLX-SelI5RgfM8');
 
 -- ----------------------------
 -- Table structure for fa_user_group
@@ -1331,12 +1394,19 @@ CREATE TABLE `fa_user_token`  (
 -- ----------------------------
 -- Records of fa_user_token
 -- ----------------------------
-INSERT INTO `fa_user_token` VALUES ('30ae863286f42f0fa2546ed765a7b7e1924d5f0c', 5, 1614243322, 1616835322);
-INSERT INTO `fa_user_token` VALUES ('594e3369f30a4b37325a77bf02c2d565aefde3cc', 5, 1614243320, 1616835320);
-INSERT INTO `fa_user_token` VALUES ('5cb6828026e756874760c3957b77681691d437df', 5, 1614243042, 1616835042);
-INSERT INTO `fa_user_token` VALUES ('b79922205840947bd664bf69a4d40221c0486caa', 5, 1614243204, 1616835204);
-INSERT INTO `fa_user_token` VALUES ('c292d56475ac65af3ea06ed2dd245e730030a26f', 5, 1614243012, 1616835012);
-INSERT INTO `fa_user_token` VALUES ('d0c27f46b49af027bd135fadb74314df350ffb8b', 5, 1614243184, 1616835184);
+INSERT INTO `fa_user_token` VALUES ('0b192a002466a06ad1a734248e1509f8980b5684', 14, 1614333413, 1616925413);
+INSERT INTO `fa_user_token` VALUES ('0d5686b8a341b3bc53c383761239bb99f55555d4', 11, 1614332471, 1616924471);
+INSERT INTO `fa_user_token` VALUES ('1119b6e642e4cdc3ee4720238d96b2684e0fee55', 13, 1614332549, 1616924549);
+INSERT INTO `fa_user_token` VALUES ('11cf0bcb1f39faf3b806b45597dbc0dcdbf35d91', 7, 1614319174, 1616911174);
+INSERT INTO `fa_user_token` VALUES ('1f6d338536b49c2cf7fabac2fb1fccba5c3bc2b6', 14, 1614334388, 1616926388);
+INSERT INTO `fa_user_token` VALUES ('3381d231bdd4dd8a1f6f89c785795dfead9c7eea', 14, 1614334422, 1616926422);
+INSERT INTO `fa_user_token` VALUES ('382db6321615ebcb47baf486eece3c240cf52d90', 10, 1614327197, 1616919197);
+INSERT INTO `fa_user_token` VALUES ('894efe1dd4d6582f33130cb3a2978beefee7dab8', 7, 1614319169, 1616911169);
+INSERT INTO `fa_user_token` VALUES ('8c21a2f98edf0ac914ab135afabc97aa7c0a9b05', 14, 1614334428, 1616926428);
+INSERT INTO `fa_user_token` VALUES ('a22bd2e5e19cde15792b7a6fa3c522f793a0cf9e', 12, 1614332508, 1616924508);
+INSERT INTO `fa_user_token` VALUES ('a320a1c2d5837d4c681c3907b8066165bba36f0d', 10, 1614329824, 1616921824);
+INSERT INTO `fa_user_token` VALUES ('b91be0190437b417c3ef17e19cf439c50bcf2cd1', 12, 1614332544, 1616924544);
+INSERT INTO `fa_user_token` VALUES ('eb9a17be644315fd00820167090049c4621164f1', 14, 1614333265, 1616925265);
 
 -- ----------------------------
 -- Table structure for fa_version

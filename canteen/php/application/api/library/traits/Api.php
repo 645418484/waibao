@@ -31,7 +31,7 @@ trait Api
             'total' => $list->total(),
             'rows' => $list->items(),
         ];
-        $this->result($result,1,'','json');
+        $this->result('操作成功',$result,1,'json');
         
     }
 }
